@@ -5,7 +5,7 @@
   --coral: #f2835f; --on-coral: #2b130b;
   --bg: #f7f1e5; --card: #fffdf8; --fg: #1c2b2c; --muted: #566766;
   --accent: #0b6470; --on-accent: #ffffff; --border: #e2d8c5; --tint: #e7efe9;
-  --bark: #7d5c3a; --leaf: #1f7a5c; --coral-ink: #b4472a;
+  --coral-ink: #b4472a;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -13,7 +13,7 @@
   :root {
     --bg: #0e1f21; --card: #162d30; --fg: #eef4f2; --muted: #a2b6b4;
     --accent: #6fd0c8; --on-accent: #06282b; --border: #2b4649; --tint: #1b383b;
-    --bark: #c09a6b; --leaf: #5cc29a; --coral-ink: #f2835f;
+    --coral-ink: #f2835f;
   }
 }
 * { box-sizing: border-box; }
@@ -92,84 +92,73 @@ button:disabled { opacity: .5; cursor: default; filter: none; }
 .demo-votes { display: flex; gap: 10px; margin: 10px 0 0; }
 .button.vote { flex: 1; font-size: 1.15rem; }
 
-/* the growing palm: the whole plant and a plain list until loop.js animates it */
+/* "How it works": the recipe book loop, laid out like the training diagram */
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+/* the view switch is two radio buttons, so it works without JavaScript */
+#view-story:checked ~ .v-ml, #view-story:checked ~ .flow .v-ml,
+#view-ml:checked ~ .v-story, #view-ml:checked ~ .flow .v-story { display: none; }
+.view-switch { display: inline-flex; margin-bottom: 14px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--card); }
+.view-switch label { margin: 0; padding: 9px 16px; min-height: 44px; display: flex; align-items: center; font-weight: 600; font-size: .92rem; cursor: pointer; }
+#view-story:checked ~ .view-switch label[for="view-story"],
+#view-ml:checked ~ .view-switch label[for="view-ml"] { background: var(--accent); color: var(--on-accent); }
+#view-story:focus-visible ~ .view-switch label[for="view-story"],
+#view-ml:focus-visible ~ .view-switch label[for="view-ml"] { outline: 3px solid var(--coral); outline-offset: -3px; }
 .step-text { margin: 0 0 20px; max-width: 640px; }
-.loop { display: grid; gap: 18px; }
-.loop-scene { min-width: 0; }
-.palm { display: block; width: 100%; max-width: 340px; margin-inline: auto; }
-.soil { fill: var(--tint); }
-.part-roots path { fill: none; stroke: var(--bark); stroke-width: 2.5; stroke-linecap: round; }
-.part-votes text { font: 700 12px var(--sans); text-anchor: middle; }
-.part-votes .up { fill: var(--accent); }
-.part-votes .down { fill: var(--coral-ink); }
-.part-palm path { fill: var(--leaf); }
-.part-palm .trunk { fill: none; stroke: var(--bark); stroke-width: 9; stroke-linecap: round; }
-.seed ellipse { fill: var(--bark); }
-.seed circle { fill: var(--bg); }
-.glow { fill: var(--coral); opacity: .14; }
-.part-fruit circle { fill: var(--coral); }
-.part-returns path { fill: none; stroke-width: 2.2; stroke-dasharray: 5 5; stroke-linecap: round; stroke-linejoin: round; }
-.return-seed { stroke: var(--coral-ink); }
-.return-roots { stroke: var(--accent); }
-.loop-controls { display: none; }
-.loop-panels { display: grid; gap: 14px; min-width: 0; }
-.loop-panel { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: clamp(16px, 3vw, 24px); min-width: 0; }
-.loop-panel > p { margin: 0 0 12px; }
-.loop-panel h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 8px; font: 600 clamp(1.2rem, 3vw, 1.4rem)/1.25 var(--serif); }
-.loop-panel h3 b, .loop-stage b {
-  flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
-  background: var(--coral); color: var(--on-coral); font: 700 .95rem var(--serif);
+.flow {
+  display: grid; gap: 10px 8px; align-items: stretch;
+  grid-template-columns: minmax(230px, 1.25fr) 30px minmax(0, 1fr) 30px minmax(0, 1fr);
+  grid-template-areas:
+    "book a1 learn a2 cook"
+    "book a3 seal  a4 a5"
+    "book a6 taste a7 dish";
 }
-.loop-panel > .poem { font: italic 1.12rem/1.4 var(--serif); color: var(--accent); margin-bottom: 6px; }
-.check-box { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
-.check-who { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
-.check-who p { margin: 0; font-size: .92rem; }
-.check-who b { display: block; }
-.check-box .sentence { font-size: clamp(1.2rem, 3vw, 1.45rem); }
-.check-box .muted { margin: 0; }
-.check-box .demo-question { margin-top: 12px; }
-.returns { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
-.return { margin: 0; padding: 12px 14px; background: var(--card); border: 1px solid var(--border); border-left: 4px dashed; border-radius: 10px; font-size: .92rem; }
-.return b { display: block; font: 600 1rem var(--serif); }
-.return-a { border-left-color: var(--coral-ink); }
-.return-b { border-left-color: var(--accent); }
-
-.loop.is-animated { grid-template-columns: minmax(290px, 340px) minmax(0, 1fr); gap: 32px; align-items: start; }
-.is-animated .loop-controls { display: block; margin-top: 12px; }
-.loop-stages { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
-.loop-stage {
-  flex-direction: column; gap: 3px; min-width: 0; min-height: 62px; padding: 6px 2px;
-  background: var(--card); color: var(--fg); border-color: var(--border); font-size: .82rem; line-height: 1.2;
+.f-book { grid-area: book; } .f-learn { grid-area: learn; } .f-cook { grid-area: cook; }
+.f-seal { grid-area: seal; } .f-dish { grid-area: dish; } .f-taste { grid-area: taste; }
+.a1 { grid-area: a1; } .a2 { grid-area: a2; } .a3 { grid-area: a3; } .a4 { grid-area: a4; }
+.a5 { grid-area: a5; } .a6 { grid-area: a6; } .a7 { grid-area: a7; }
+.flow-box {
+  min-width: 0; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 14px;
+  transition: border-color .3s ease, box-shadow .3s ease;
 }
-.loop-stage b { width: 22px; height: 22px; font-size: .8rem; background: var(--tint); color: var(--accent); }
-.loop-stage[aria-current] { border-color: var(--coral); box-shadow: 0 0 0 2px var(--coral); }
-.loop-stage[aria-current] b { background: var(--coral); color: var(--on-coral); }
-.loop-toggle { display: flex; margin: 8px auto 0; min-height: 44px; padding: 6px 16px; background: transparent; color: var(--accent); border-color: var(--border); font-size: .9rem; }
-/* inactive panels are only hidden visually, so screen readers and Tab still reach them */
-.is-animated .loop-panel { grid-area: 1 / 1; opacity: 0; pointer-events: none; align-self: start; transition: opacity .35s ease; }
-.is-animated .loop-panel.active { opacity: 1; pointer-events: auto; }
-
-/* each stage reveals the next part of the plant */
-.is-animated .part { opacity: 0; transition: opacity .9s ease; }
-.is-animated .part-palm { transform-box: view-box; transform-origin: 170px 250px; transform: scale(.25); transition: opacity .9s ease, transform 1.4s cubic-bezier(.3, .7, .3, 1); }
-.palm[data-stage="1"] .part-roots, .palm[data-stage="1"] .part-votes,
-.palm[data-stage="2"] .part-roots, .palm[data-stage="2"] .part-palm,
-.palm[data-stage="3"] .part-roots, .palm[data-stage="3"] .part-palm,
-.palm[data-stage="3"] .part-fruit, .palm[data-stage="3"] .part-returns { opacity: 1; }
-.palm[data-stage="2"] .part-palm, .palm[data-stage="3"] .part-palm { transform: scale(1); }
-@media (prefers-reduced-motion: no-preference) {
-  .is-animated .glow { animation: breathe 5s ease-in-out infinite; }
-  @keyframes breathe { 0%, 100% { opacity: .1; } 50% { opacity: .32; } }
+.flow-box.is-current { border-color: var(--coral); box-shadow: 0 0 0 2px var(--coral); }
+.f-seal { border-style: dashed; }
+.f-dish { align-self: start; }
+.flow-head { display: flex; gap: 10px; align-items: flex-start; }
+.flow-head h3 { margin: 0; font: 600 1.08rem/1.25 var(--serif); }
+.flow-icon { flex: none; width: 28px; height: 28px; fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.flow-plain { margin: 2px 0 0; font-size: .78rem; font-weight: 600; letter-spacing: .03em; color: var(--muted); }
+.flow-text { margin: 8px 0 0; font-size: .9rem; }
+.tabs-list { list-style: none; margin: 12px 0 8px; padding: 0; display: grid; gap: 10px; }
+.tabs-list li { display: block; padding-top: 10px; border-top: 1px solid var(--border); font-size: .88rem; }
+.tabs-list b { display: block; font: 600 .98rem var(--serif); }
+.tab-bar { display: block; height: 8px; width: var(--w); margin-bottom: 7px; border-radius: 4px; background: var(--accent); }
+.tabs-list li:nth-child(2) .tab-bar { opacity: .68; }
+.tabs-list li:nth-child(3) .tab-bar { opacity: .38; }
+.flow-note { margin: 10px 0 0; }
+.taste-box { display: grid; gap: 8px; margin-top: 10px; padding: 10px 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; }
+.taste-box p { margin: 0; font-size: .86rem; }
+.taste-box b { display: block; }
+.flow-return { margin: 10px 0 0; font-weight: 600; font-size: .92rem; color: var(--accent); }
+.flow-arrow { display: grid; place-items: center; color: var(--muted); font-size: 1.5rem; line-height: 1; transition: color .3s ease; }
+.flow-arrow::before { content: "→"; }
+.flow-arrow.is-current { color: var(--coral-ink); }
+.a3::before { content: "→"; }
+.a4::before { content: "↗"; }
+.a5::before { content: "↓"; }
+.a6::before, .a7::before { content: "←"; }
+.a7 { align-items: start; padding-top: 18px; }
+.loop-toggle { display: none; margin: 12px 0 0; min-height: 44px; padding: 6px 16px; background: transparent; color: var(--accent); border-color: var(--border); font-size: .9rem; }
+.flow.is-animated + .loop-toggle { display: inline-flex; }
+@media (max-width: 860px) {
+  .flow {
+    grid-template-columns: minmax(0, 1fr); gap: 6px;
+    grid-template-areas: "book" "a1" "learn" "a2" "cook" "a5" "dish" "a7" "taste" "seal";
+  }
+  .a3, .a4, .a6 { display: none; }
+  .flow-arrow::before, .a5::before, .a7::before { content: "↓"; }
+  .f-seal { margin-top: 12px; }
+  .a7 { padding-top: 0; }
 }
-
-/* layers: wider bar, more data */
-.layers { list-style: none; margin: 0 0 12px; padding: 0; }
-.layers li { display: grid; grid-template-columns: minmax(64px, 24%) 1fr; gap: 14px; align-items: center; padding-block: 10px; border-top: 1px solid var(--border); }
-.layers .bar { justify-self: center; display: block; height: 30px; width: var(--w); background: var(--accent); border-radius: 6px; }
-.layers li:nth-child(2) .bar { opacity: .68; }
-.layers li:nth-child(3) .bar { opacity: .38; }
-.layers b { font: 600 1rem var(--serif); }
-.layers p { margin: 2px 0 0; font-size: .9rem; }
 
 /* people */
 .people { list-style: none; padding: 0; margin: 22px 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
@@ -224,16 +213,10 @@ summary { cursor: pointer; color: var(--accent); font-weight: 500; }
 .rate-row button { flex: 1; min-width: 0; min-height: 54px; padding-inline: 4px; font-size: 1.2rem; }
 pre { white-space: pre-wrap; overflow-wrap: anywhere; font: 1rem/1.6 var(--sans); }
 
-@media (max-width: 760px) {
-  .loop.is-animated { grid-template-columns: minmax(0, 1fr); gap: 18px; }
-  .returns { grid-template-columns: 1fr; }
-}
-
 /* phones */
 @media (max-width: 620px) {
   .stats { grid-template-columns: 1fr; gap: 14px; }
   .stats > div { display: grid; grid-template-columns: 9.6em 1fr; gap: 10px; align-items: baseline; }
   .stats span { margin: 0; }
-  .check-who { grid-template-columns: 1fr; }
   .cta-row .button { flex: 1 1 150px; }
 }

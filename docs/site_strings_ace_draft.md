@@ -83,47 +83,11 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - ACE draft: Kiban cara keureuja jih
 - Koreksi:
 
-**how.l1.title**
-- ID: Diperiksa spesialis
-- EN: Specialist-checked
-- ACE draft: Geupareksa lé ahli
-- Koreksi:
 
-**how.l1.text**
-- ID: Kalimat yang diperiksa dan dikoreksi penutur asli berpendidikan dari LSM dan lembaga. Data terbaik dan paling sedikit.
-- EN: Sentences checked and corrected by educated native speakers from NGOs and institutions. The best data, and the smallest.
-- ACE draft: Kalimat nyang geupareksa ngon geupeubeutôi lé ureueng Aceh nyang meupeundidikan dari LSM ngon lembaga. Data nyang paleng gét ngon paleng dit.
-- Koreksi:
 
-**how.l2.title**
-- ID: Penutur sehari-hari
-- EN: Everyday speakers
-- ACE draft: Ureueng nyang marit uroe-uroe
-- Koreksi:
 
-**how.l2.text**
-- ID: Penutur harian, rekaman, dan teks internet, dengan pemeriksaan cepat oleh penutur.
-- EN: Daily speakers, recordings and internet text, with a quick check from speakers.
-- ACE draft: Ureueng nyang marit uroe-uroe, rekaman, ngon teks internet, ngon pareksa bacut lé ureueng Aceh.
-- Koreksi:
 
-**how.l3.title**
-- ID: Sintetis
-- EN: Synthetic
-- ACE draft: Sintetis
-- Koreksi:
 
-**how.l3.text**
-- ID: Kalimat buatan AI, ditandai jelas sebagai belum terverifikasi. Paling banyak dan paling kurang dipercaya — sampai penutur mengoreksinya.
-- EN: AI-drafted sentences, clearly marked as unverified. The most plentiful and the least trusted — until a speaker corrects them.
-- ACE draft: Kalimat nyang geupeugöt lé AI, geutanda jeulah gohlom geuverifikasi. Paleng le ngon paleng kureueng geupeucaya — sampoe ureueng Aceh geupeubeutôi.
-- Koreksi:
-
-**how.note**
-- ID: Makin ke atas makin bermutu; makin ke bawah makin banyak. Tidak ada yang naik lapisan tanpa manusia.
-- EN: Quality goes up the list; volume goes down. Nothing moves up a layer without a human.
-- ACE draft: Makin u ateueh makin gét; makin u yup makin le. Hana nyang ék lapisan meunyo hana ureueng.
-- Koreksi:
 
 **people.title**
 - ID: Orang-orang di baliknya
@@ -405,17 +369,6 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - ACE draft: droe di Pulo Weh
 - Koreksi:
 
-**demo.label**
-- ID: Draf AI, belum diperiksa
-- EN: AI draft, not yet checked
-- ACE draft: Draf AI, gohlom geupareksa
-- Koreksi:
-
-**demo.question**
-- ID: Apakah ini terdengar wajar bagi Anda?
-- EN: Does this sound right to you?
-- ACE draft: Peue nyoe deuh wajar bak droeneuh?
-- Koreksi:
 
 **datasets.layer**
 - ID: Lapisan
@@ -423,156 +376,234 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - ACE draft: Lapisan
 - Koreksi:
 
-## Added with the loop section
+## How it works: the recipe book
 
-
-
-
-
-**loop.specialist.title**
-- ID: Spesialis
-- EN: Specialists
-- ACE draft: Ahli
+**loop.intro**
+- ID: Bayangkan dapur keluarga. Juru masak belajar dari satu buku resep, dan keluarga yang menentukan apa yang masuk kembali ke dalamnya.
+- EN: Think of a family kitchen. The cook learns from one recipe book, and the family decides what goes back into it.
+- ACE draft: Bayangkan dapu keluarga. Tukang masak jibeulajai nibak saboh kitab resep, ngon keluarga nyang peutentèe peue nyang jitamong lom lam kitab nyan.
 - Koreksi:
 
-**loop.specialist**
-- ID: Memberi nilai 1–5, mengoreksi, dan memberi catatan.
-- EN: Rate 1–5, correct and annotate.
-- ACE draft: Geubri nilai 1–5, geupeubeutôi, ngon geubri catatan.
+**loop.book.title**
+- ID: Buku resep
+- EN: The recipe book
+- ACE draft: Kitab resep
 - Koreksi:
 
-**loop.everyday.title**
-- ID: Penutur sehari-hari
-- EN: Everyday speakers
-- ACE draft: Ureueng nyang marit uroe-uroe
+**loop.book.plain**
+- ID: Dataset
+- EN: Dataset
+- ACE draft: Dataset
 - Koreksi:
 
-**loop.everyday**
+**loop.t1.title**
+- ID: Resep para tetua
+- EN: Elders’ recipes
+- ACE draft: Resep ureueng tuha
+- Koreksi:
+
+**loop.t1.text**
+- ID: Diperiksa spesialis. Paling sedikit, paling dipercaya.
+- EN: Specialist-checked. Smallest, most trusted.
+- ACE draft: Geupareksa lé ahli. Paleng dit, paleng geupeucaya.
+- Koreksi:
+
+**loop.t2.title**
+- ID: Resep tetangga
+- EN: Neighbours’ recipes
+- ACE draft: Resep jiran
+- Koreksi:
+
+**loop.t2.text**
+- ID: Penutur sehari-hari dan teks internet.
+- EN: Everyday speakers and internet text.
+- ACE draft: Ureueng nyang marit uroe-uroe ngon teks internet.
+- Koreksi:
+
+**loop.t3.title**
+- ID: Resep tulisan mesin
+- EN: Machine-written recipes
+- ACE draft: Resep tuléh mesin
+- Koreksi:
+
+**loop.t3.text**
+- ID: Draf AI sintetis. Paling banyak, paling kurang dipercaya.
+- EN: Synthetic AI drafts. Largest, least trusted.
+- ACE draft: Draf AI sintetis. Paleng le, paleng kureueng geupeucaya.
+- Koreksi:
+
+**loop.book.note**
+- ID: Resep hanya naik setelah dicicipi orang.
+- EN: A recipe moves up only when a person has tasted it.
+- ACE draft: Resep ék meunyo ka geurasa lé ureueng.
+- Koreksi:
+
+**loop.learn.title**
+- ID: Juru masak mempelajari buku
+- EN: The cook learns the book
+- ACE draft: Tukang masak jibeulajai kitab
+- Koreksi:
+
+**loop.learn.plain**
+- ID: Pelatihan
+- EN: Training
+- ACE draft: Latéh
+- Koreksi:
+
+**loop.cook.title**
+- ID: Juru masak
+- EN: The cook
+- ACE draft: Tukang masak
+- Koreksi:
+
+**loop.cook.plain**
+- ID: Model
+- EN: Model
+- ACE draft: Model
+- Koreksi:
+
+**loop.seal.title**
+- ID: Resep keluarga yang disegel
+- EN: A sealed family recipe
+- ACE draft: Resep keluarga nyang geututôp
+- Koreksi:
+
+**loop.seal.plain**
+- ID: Set uji terkunci
+- EN: Locked test set
+- ACE draft: Set uji nyang geukunci
+- Koreksi:
+
+**loop.seal.text**
+- ID: Juru masak tidak pernah membacanya. Resep ini menunjukkan apakah juru masak baru benar-benar lebih baik.
+- EN: The cook never reads it. It shows whether each new cook is really better.
+- ACE draft: Tukang masak hana tom jibaca. Nyoe jipeudeuh peue tukang masak baro beutôi leubèh gét.
+- Koreksi:
+
+**loop.dish.title**
+- ID: Memasak hidangan baru
+- EN: Cooks new dishes
+- ACE draft: Jimasak idangan baro
+- Koreksi:
+
+**loop.dish.plain**
+- ID: Menghasilkan
+- EN: Generate
+- ACE draft: Peuhasé
+- Koreksi:
+
+**loop.taste.title**
+- ID: Keluarga mencicipi
+- EN: The family tastes
+- ACE draft: Keluarga geurasa
+- Koreksi:
+
+**loop.taste.plain**
+- ID: Tinjauan manusia: anotasi dan evaluasi
+- EN: Human review: annotation and evaluation
+- ACE draft: Pareksa ureueng: anotasi ngon evaluasi
+- Koreksi:
+
+**loop.elders.title**
+- ID: Para tetua (spesialis)
+- EN: Elders (specialists)
+- ACE draft: Ureueng tuha (ahli)
+- Koreksi:
+
+**loop.elders.text**
+- ID: Memberi nilai 1–5, mengoreksi, dan mencatat.
+- EN: Score 1–5, correct and annotate.
+- ACE draft: Geubri nilai 1–5, geupeubeutôi, ngon geucatat.
+- Koreksi:
+
+**loop.others.title**
+- ID: Yang lain
+- EN: Everyone else
+- ACE draft: Nyang laén
+- Koreksi:
+
+**loop.others.text**
 - ID: Cukup +1 atau −1.
 - EN: A quick +1 or −1.
 - ACE draft: Cukôp +1 atawa −1.
 - Koreksi:
 
-
-
-
-
-**loop.pause**
-- ID: Jeda
-- EN: Pause
-- ACE draft: Piyôh
+**loop.return**
+- ID: Yang lolos masuk ke dalam buku.
+- EN: What passes goes into the book.
+- ACE draft: Nyang lulôt jitamong lam kitab.
 - Koreksi:
 
-**loop.play**
-- ID: Putar
-- EN: Play
-- ACE draft: Puta
+## ML pipeline view
+
+**loop.view.label**
+- ID: Tampilan
+- EN: View
+- ACE draft: Rupa
 - Koreksi:
 
-**loop.intro**
-- ID: Ia tumbuh seperti pohon kelapa, dan buahnya memulai putaran berikutnya.
-- EN: It grows like a coconut palm, and its fruit starts the next round.
-- ACE draft: Jih timoh lagèe bak u, ngon boh jih geupeumulai putaran nyang teuma.
+**loop.view.story**
+- ID: Buku resep
+- EN: Recipe book
+- ACE draft: Kitab resep
 - Koreksi:
 
-**loop.s1.title**
-- ID: Benih
-- EN: Seed
-- ACE draft: Bijeh
+**loop.view.ml**
+- ID: Pipeline ML
+- EN: ML pipeline
+- ACE draft: Pipeline ML
 - Koreksi:
 
-**loop.s1.poem**
-- ID: Benih menyimpan yang hidup.
-- EN: The seed holds what is alive.
-- ACE draft: Bijeh jipeuteun nyang udep.
+**loop.ml.intro**
+- ID: Putaran yang sama dalam istilah pembelajaran mesin.
+- EN: The same loop in standard machine-learning terms.
+- ACE draft: Putaran nyang sama lam istilah machine learning.
 - Koreksi:
 
-**loop.s1.text**
-- ID: Semuanya berawal dari kalimat yang diperiksa spesialis: sedikit saja, tetapi menunjukkan seperti apa bahasa Aceh yang baik.
-- EN: It starts with sentences specialists have checked: only a few, but they show what good Acehnese sounds like.
-- ACE draft: Geumulai nibak kalimat nyang ka geupareksa lé ahli: bacut mantong, teuma jipeudeuh kiban basa Aceh nyang gét.
+**loop.ml.t1**
+- ID: Lapisan 1: spesialis
+- EN: Layer 1: specialist
+- ACE draft: Lapisan 1: ahli
 - Koreksi:
 
-**loop.s2.title**
-- ID: Akar
-- EN: Roots
-- ACE draft: Ukheue
+**loop.ml.t2**
+- ID: Lapisan 2: sehari-hari
+- EN: Layer 2: everyday
+- ACE draft: Lapisan 2: uroe-uroe
 - Koreksi:
 
-**loop.s2.poem**
-- ID: Akar menjangkau keluar.
-- EN: The roots reach out.
-- ACE draft: Ukheue jijak u luwa.
+**loop.ml.t3**
+- ID: Lapisan 3: sintetis
+- EN: Layer 3: synthetic
+- ACE draft: Lapisan 3: sintetis
 - Koreksi:
 
-**loop.s2.text**
-- ID: Teks dan tuturan bahasa Aceh dikumpulkan, dipilah menurut seberapa jauh bisa dipercaya.
-- EN: Acehnese text and speech are gathered, sorted by how far they can be trusted.
-- ACE draft: Teks ngon tutoe basa Aceh geukumpoi, geupisah meunurot padum jeuet geupeucaya.
+**loop.ml.note**
+- ID: Kalimat hanya naik lapisan setelah ditinjau manusia.
+- EN: A sentence moves up a layer only after human review.
+- ACE draft: Kalimat ék lapisan meunyo ka geupareksa lé ureueng.
 - Koreksi:
 
-**loop.s3.title**
-- ID: Pohon
-- EN: Palm
-- ACE draft: Bak u
+**loop.ml.seal**
+- ID: Disisihkan dari pelatihan. Menilai setiap model baru.
+- EN: Held back from training. Scores each new model.
+- ACE draft: Geupeuasoe nibak latéh. Geunilai tiep model baro.
 - Koreksi:
 
-**loop.s3.poem**
-- ID: Pohon tumbuh, dan dicicipi.
-- EN: The palm grows, and is tasted.
-- ACE draft: Bak jitimoh, ngon geurasa.
+**loop.ml.elders**
+- ID: Spesialis
+- EN: Specialists
+- ACE draft: Ahli
 - Koreksi:
 
-**loop.s3.text**
-- ID: Data yang sudah diperiksa melatih model bahasa. Penutur memeriksa data baru dan jawaban model dengan cara yang sama.
-- EN: Checked data trains a language model. Speakers check new data and model answers in the same way.
-- ACE draft: Data nyang ka geupareksa geupeuguna keu latéh model basa. Ureueng Aceh geupareksa data baro ngon jaweueb model ngon cara nyang sama.
+**loop.ml.others**
+- ID: Penutur sehari-hari
+- EN: Everyday speakers
+- ACE draft: Ureueng nyang marit uroe-uroe
 - Koreksi:
 
-**loop.s4.title**
-- ID: Buah
-- EN: Fruit
-- ACE draft: Boh
-- Koreksi:
-
-**loop.s4.poem**
-- ID: Buah membawa benih baru.
-- EN: The fruit carries new seeds.
-- ACE draft: Boh jiba bijeh baro.
-- Koreksi:
-
-**loop.s4.text**
-- ID: Model menulis draf baru. Yang diterima penutur menjadi benih putaran berikutnya.
-- EN: The model writes new drafts. What speakers accept becomes the seeds of the next round.
-- ACE draft: Model jipeugöt draf baro. Nyang geuteurimong lé ureueng Aceh jeuet keu bijeh putaran nyang teuma.
-- Koreksi:
-
-**loop.check.title**
-- ID: Penutur memeriksa
-- EN: Speakers check
-- ACE draft: Ureueng Aceh geupareksa
-- Koreksi:
-
-**loop.return1.title**
-- ID: Benih belajar dari buahnya
-- EN: The seed learns from its fruit
-- ACE draft: Bijeh jibeulajai nibak boh jih
-- Koreksi:
-
-**loop.return1.text**
-- ID: Koreksi mengajari model apa yang patut dikatakan.
-- EN: Corrections teach the model what is worth saying.
-- ACE draft: Peubeutôi jipeurunoe model peue nyang patôt jipeugah.
-- Koreksi:
-
-**loop.return2.title**
-- ID: Akar menuju tanah yang lebih subur
-- EN: The roots reach for richer ground
-- ACE draft: Ukheue jijak u tanoh nyang leubèh subur
-- Koreksi:
-
-**loop.return2.text**
-- ID: Hasil menunjukkan di mana harus mengumpulkan berikutnya.
-- EN: Results show where to collect next.
-- ACE draft: Hasé jipeudeuh pat takumpoi nyang teuma.
+**loop.ml.return**
+- ID: Data yang ditinjau kembali ke dataset.
+- EN: Reviewed data returns to the dataset.
+- ACE draft: Data nyang ka geupareksa jiwoe u dataset.
 - Koreksi:

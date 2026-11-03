@@ -1,80 +1,46 @@
-/* "How it works": a coconut palm that grows through four stages. Without this
-   script, or with reduced motion, the full palm and all stages simply show. */
+/* "How it works": a highlight steps round the recipe book loop. Without this
+   script, or with reduced motion, the whole diagram simply stays as it is. */
 "use strict";
 
 (function () {
   const root = document.getElementById("loop");
   if (!root || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  const scene = document.getElementById("palm");
-  const stages = [...root.querySelectorAll(".loop-stage")];
-  const panels = [...root.querySelectorAll(".loop-panel")];
+  const steps = [...root.querySelectorAll("[data-step]")];
+  const arrows = [...root.querySelectorAll("[data-from]")];
   const toggle = document.getElementById("loop-toggle");
-  const panelBox = root.querySelector(".loop-panels");
-  const MIN_STEP_MS = 6000;
-  const MS_PER_WORD = 250;
+  const STEP_MS = 3000;
 
   let current = 0;
   let playing = true;
   let onScreen = false;
-  let hovering = false;
   let timer = null;
 
   function show(i) {
     current = i;
-    scene.dataset.stage = String(i);
-    stages.forEach((b, n) => {
-      if (n === i) b.setAttribute("aria-current", "step");
-      else b.removeAttribute("aria-current");
-    });
-    panels.forEach((p, n) => p.classList.toggle("active", n === i));
-  }
-
-  // Long panels stay up longer, whatever language they are in.
-  function stepMs() {
-    const words = panels[current].textContent.trim().split(/\s+/).length;
-    return Math.max(MIN_STEP_MS, words * MS_PER_WORD);
+    steps.forEach((s) => s.classList.toggle("is-current", Number(s.dataset.step) === i));
+    arrows.forEach((a) => a.classList.toggle("is-current", Number(a.dataset.from) === i));
   }
 
   function sync() {
-    clearTimeout(timer);
+    clearInterval(timer);
     timer = null;
-    const focusWithin = panelBox.contains(document.activeElement);
-    if (playing && onScreen && !hovering && !focusWithin && !document.hidden) {
-      timer = setTimeout(() => {
-        show((current + 1) % stages.length);
-        sync();
-      }, stepMs());
+    if (playing && onScreen && !document.hidden) {
+      timer = setInterval(() => show((current + 1) % steps.length), STEP_MS);
     }
     toggle.textContent = t(playing ? "loop.pause" : "loop.play");
   }
 
-  stages.forEach((b, i) => b.addEventListener("click", () => {
-    playing = false;
-    show(i);
-    sync();
-  }));
   toggle.addEventListener("click", () => {
     playing = !playing;
     sync();
   });
-  // Every panel stays in the page for screen readers and the Tab key, so moving
-  // focus into one brings it into view.
-  panels.forEach((p, i) => p.addEventListener("focusin", () => {
-    show(i);
-    sync();
-  }));
-  panelBox.addEventListener("mouseenter", () => { hovering = true; sync(); });
-  panelBox.addEventListener("mouseleave", () => { hovering = false; sync(); });
-  panelBox.addEventListener("focusout", () => setTimeout(sync));
   document.addEventListener("visibilitychange", sync);
   document.addEventListener("langchange", sync);
-  // Watching the palm rather than the section also stops the loop on phones once
-  // the reader has scrolled down to the panel text.
   new IntersectionObserver((entries) => {
     onScreen = entries[entries.length - 1].isIntersecting;
     sync();
-  }, { threshold: 0.5 }).observe(root.querySelector(".loop-scene"));
+  }, { threshold: 0.25 }).observe(root);
 
   root.classList.add("is-animated");
   show(0);

@@ -46,104 +46,51 @@
 
   <section id="how" class="wrap">
     <h2 data-i18n="how.title">How it works</h2>
-    <p class="step-text" data-i18n="loop.intro">It grows like a coconut palm, and its fruit starts the next round.</p>
-    <div id="loop" class="loop">
-      <div class="loop-scene">
-        <svg id="palm" class="palm" viewBox="0 0 340 380" aria-hidden="true">
-          <rect class="soil" x="0" y="250" width="340" height="130" rx="14"/>
-          <g class="part part-roots">
-            <path d="M170 258 C168 285 150 305 112 322"/>
-            <path d="M170 258 C172 290 190 312 232 328"/>
-            <path d="M170 258 C166 276 140 282 96 286"/>
-            <path d="M170 258 C174 278 204 284 248 288"/>
-            <path d="M170 258 C170 295 168 325 170 352"/>
-          </g>
-          <g class="part part-votes">
-            <circle class="up" cx="96" cy="286" r="5"/><text class="up" x="96" y="274">+1</text>
-            <circle class="down" cx="112" cy="322" r="5"/><text class="down" x="112" y="344">−1</text>
-            <circle class="up" cx="248" cy="288" r="5"/><text class="up" x="248" y="276">+1</text>
-            <circle class="up" cx="232" cy="328" r="5"/><text class="up" x="232" y="350">+1</text>
-          </g>
-          <g class="part part-palm">
-            <path class="trunk" d="M170 250 C174 200 176 150 190 96"/>
-            <path d="M190 96 Q150 50 96 88 Q150 72 190 96Z"/>
-            <path d="M190 96 Q170 52 128 44 Q168 64 190 96Z"/>
-            <path d="M190 96 Q198 46 244 46 Q208 62 190 96Z"/>
-            <path d="M190 96 Q236 58 286 92 Q236 78 190 96Z"/>
-            <path d="M190 96 Q146 98 112 140 Q152 108 190 96Z"/>
-            <path d="M190 96 Q232 98 264 142 Q228 108 190 96Z"/>
-          </g>
-          <circle class="glow" cx="170" cy="242" r="30"/>
-          <g class="seed">
-            <ellipse cx="170" cy="242" rx="18" ry="14"/>
-            <circle cx="164" cy="238" r="1.8"/><circle cx="172" cy="236" r="1.8"/><circle cx="168" cy="244" r="1.8"/>
-          </g>
-          <g class="part part-fruit">
-            <circle cx="180" cy="108" r="8"/><circle cx="199" cy="110" r="8"/><circle cx="189" cy="122" r="8"/>
-          </g>
-          <g class="part part-returns">
-            <path class="return-seed" d="M176 130 C118 170 116 214 148 236 M139 238 L148 236 L147 227"/>
-            <path class="return-roots" d="M204 130 C292 170 302 250 256 284 M256 275 L256 284 L265 285"/>
-          </g>
-        </svg>
-        <div class="loop-controls">
-          <div class="loop-stages">
-            <button type="button" class="loop-stage"><b>1</b><span data-i18n="loop.s1.title">Seed</span></button>
-            <button type="button" class="loop-stage"><b>2</b><span data-i18n="loop.s2.title">Roots</span></button>
-            <button type="button" class="loop-stage"><b>3</b><span data-i18n="loop.s3.title">Palm</span></button>
-            <button type="button" class="loop-stage"><b>4</b><span data-i18n="loop.s4.title">Fruit</span></button>
-          </div>
-          <button type="button" id="loop-toggle" class="loop-toggle" data-i18n="loop.pause">Pause</button>
+    <input type="radio" name="how-view" id="view-story" class="sr-only" checked>
+    <input type="radio" name="how-view" id="view-ml" class="sr-only">
+    <div class="view-switch">
+      <span class="sr-only" data-i18n="loop.view.label">View</span>
+      <label for="view-story" data-i18n="loop.view.story">Recipe book</label>
+      <label for="view-ml" data-i18n="loop.view.ml">ML pipeline</label>
+    </div>
+    <p class="step-text v-story" data-i18n="loop.intro">Think of a family kitchen. The cook learns from one recipe book, and the family decides what goes back into it.</p>
+    <p class="step-text v-ml" data-i18n="loop.ml.intro">The same loop in standard machine-learning terms.</p>
+    <div id="loop" class="flow">
+      <article class="flow-box f-book" data-step="0">
+        <div class="flow-head"><svg class="flow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/><path d="M8 7h7M8 11h7"/></svg><div><h3 class="v-story" data-i18n="loop.book.title">The recipe book</h3><p class="flow-plain v-story" data-i18n="loop.book.plain">Dataset</p><h3 class="v-ml" data-i18n="loop.book.plain">Dataset</h3></div></div>
+        <ul class="tabs-list">
+          <li><span class="tab-bar" style="--w:34%"></span><b class="v-story" data-i18n="loop.t1.title">Elders’ recipes</b><b class="v-ml" data-i18n="loop.ml.t1">Layer 1: specialist</b><span data-i18n="loop.t1.text">Specialist-checked. Smallest, most trusted.</span></li>
+          <li><span class="tab-bar" style="--w:64%"></span><b class="v-story" data-i18n="loop.t2.title">Neighbours’ recipes</b><b class="v-ml" data-i18n="loop.ml.t2">Layer 2: everyday</b><span data-i18n="loop.t2.text">Everyday speakers and internet text.</span></li>
+          <li><span class="tab-bar" style="--w:100%"></span><b class="v-story" data-i18n="loop.t3.title">Machine-written recipes</b><b class="v-ml" data-i18n="loop.ml.t3">Layer 3: synthetic</b><span data-i18n="loop.t3.text">Synthetic AI drafts. Largest, least trusted.</span></li>
+        </ul>
+        <p class="muted flow-note v-story" data-i18n="loop.book.note">A recipe moves up only when a person has tasted it.</p>
+        <p class="muted flow-note v-ml" data-i18n="loop.ml.note">A sentence moves up a layer only after human review.</p>
+      </article>
+      <span class="flow-arrow a1" data-from="0" aria-hidden="true"></span>
+      <article class="flow-box f-learn" data-step="1"><div class="flow-head"><svg class="flow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5c3-1.5 6-1.5 9 0v14c-3-1.5-6-1.5-9 0zM21 5c-3-1.5-6-1.5-9 0v14c3-1.5 6-1.5 9 0z"/></svg><div><h3 class="v-story" data-i18n="loop.learn.title">The cook learns the book</h3><p class="flow-plain v-story" data-i18n="loop.learn.plain">Training</p><h3 class="v-ml" data-i18n="loop.learn.plain">Training</h3></div></div></article>
+      <span class="flow-arrow a2" data-from="1" aria-hidden="true"></span>
+      <article class="flow-box f-cook" data-step="2"><div class="flow-head"><svg class="flow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 10h14v7a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3z"/><path d="M2 12h3M19 12h3M8 7c0-1.5 1-1.5 1-3M12 7c0-1.5 1-1.5 1-3M16 7c0-1.5 1-1.5 1-3"/></svg><div><h3 class="v-story" data-i18n="loop.cook.title">The cook</h3><p class="flow-plain v-story" data-i18n="loop.cook.plain">Model</p><h3 class="v-ml" data-i18n="loop.cook.plain">Model</h3></div></div></article>
+      <span class="flow-arrow a3" data-from="3" aria-hidden="true"></span>
+      <article class="flow-box f-seal" data-step="3">
+        <div class="flow-head"><svg class="flow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><h3 class="v-story" data-i18n="loop.seal.title">A sealed family recipe</h3><p class="flow-plain v-story" data-i18n="loop.seal.plain">Locked test set</p><h3 class="v-ml" data-i18n="loop.seal.plain">Locked test set</h3></div></div>
+        <p class="flow-text v-story" data-i18n="loop.seal.text">The cook never reads it. It shows whether each new cook is really better.</p>
+        <p class="flow-text v-ml" data-i18n="loop.ml.seal">Held back from training. Scores each new model.</p>
+      </article>
+      <span class="flow-arrow a4" data-from="3" aria-hidden="true"></span>
+      <span class="flow-arrow a5" data-from="2" aria-hidden="true"></span>
+      <article class="flow-box f-dish" data-step="4"><div class="flow-head"><svg class="flow-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/></svg><div><h3 class="v-story" data-i18n="loop.dish.title">Cooks new dishes</h3><p class="flow-plain v-story" data-i18n="loop.dish.plain">Generate</p><h3 class="v-ml" data-i18n="loop.dish.plain">Generate</h3></div></div></article>
+      <span class="flow-arrow a7" data-from="4" aria-hidden="true"></span>
+      <article class="flow-box f-taste" data-step="5">
+        <div class="flow-head"><svg class="flow-icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6.5" rx="4" ry="4"/><path d="M12 10.5V21"/></svg><div><h3 class="v-story" data-i18n="loop.taste.title">The family tastes</h3><p class="flow-plain v-story" data-i18n="loop.taste.plain">Human review: annotation and evaluation</p><h3 class="v-ml" data-i18n="loop.taste.plain">Human review: annotation and evaluation</h3></div></div>
+        <div class="taste-box">
+          <p><b class="v-story" data-i18n="loop.elders.title">Elders (specialists)</b><b class="v-ml" data-i18n="loop.ml.elders">Specialists</b><span data-i18n="loop.elders.text">Score 1–5, correct and annotate.</span></p>
+          <p><b class="v-story" data-i18n="loop.others.title">Everyone else</b><b class="v-ml" data-i18n="loop.ml.others">Everyday speakers</b><span data-i18n="loop.others.text">A quick +1 or −1.</span></p>
         </div>
-      </div>
-      <div class="loop-panels">
-        <article class="loop-panel">
-          <h3><b>1</b><span data-i18n="loop.s1.title">Seed</span></h3>
-          <p class="poem" data-i18n="loop.s1.poem">The seed holds what is alive.</p>
-          <p data-i18n="loop.s1.text">It starts with sentences specialists have checked: only a few, but they show what good Acehnese sounds like.</p>
-        </article>
-        <article class="loop-panel">
-          <h3><b>2</b><span data-i18n="loop.s2.title">Roots</span></h3>
-          <p class="poem" data-i18n="loop.s2.poem">The roots reach out.</p>
-          <p data-i18n="loop.s2.text">Acehnese text and speech are gathered, sorted by how far they can be trusted.</p>
-          <ul class="layers">
-            <li><span class="bar" style="--w:34%"></span><div><b data-i18n="how.l1.title">Specialist-checked</b><p data-i18n="how.l1.text">Sentences checked and corrected by educated native speakers from NGOs and institutions. The best data, and the smallest.</p></div></li>
-            <li><span class="bar" style="--w:64%"></span><div><b data-i18n="how.l2.title">Everyday speakers</b><p data-i18n="how.l2.text">Daily speakers, recordings and internet text, with a quick check from speakers.</p></div></li>
-            <li><span class="bar" style="--w:100%"></span><div><b data-i18n="how.l3.title">Synthetic</b><p data-i18n="how.l3.text">AI-drafted sentences, clearly marked as unverified. The most plentiful and the least trusted — until a speaker corrects them.</p></div></li>
-          </ul>
-          <p class="muted" data-i18n="how.note">Quality goes up the list; volume goes down. Nothing moves up a layer without a human.</p>
-        </article>
-        <article class="loop-panel">
-          <h3><b>3</b><span data-i18n="loop.s3.title">Palm</span></h3>
-          <p class="poem" data-i18n="loop.s3.poem">The palm grows, and is tasted.</p>
-          <p data-i18n="loop.s3.text">Checked data trains a language model. Speakers check new data and model answers in the same way.</p>
-          <div class="check-box">
-            <p class="eyebrow" data-i18n="loop.check.title">Speakers check</p>
-            <div class="check-who">
-              <p><b data-i18n="loop.specialist.title">Specialists</b><span data-i18n="loop.specialist">Rate 1–5, correct and annotate.</span></p>
-              <p><b data-i18n="loop.everyday.title">Everyday speakers</b><span data-i18n="loop.everyday">A quick +1 or −1.</span></p>
-            </div>
-            <p class="eyebrow" data-i18n="demo.label">AI draft, not yet checked</p>
-            <p class="sentence" lang="ace">Lôn beudôh poh limong beungoh.</p>
-            <p class="muted" data-i18n="demo.translation">I get up at five in the morning.</p>
-            <p class="demo-question" data-i18n="demo.question">Does this sound right to you?</p>
-            <p class="demo-votes">
-              <a class="button vote" href="/app/#review">+1</a>
-              <a class="button vote" href="/app/#review">−1</a>
-            </p>
-          </div>
-        </article>
-        <article class="loop-panel">
-          <h3><b>4</b><span data-i18n="loop.s4.title">Fruit</span></h3>
-          <p class="poem" data-i18n="loop.s4.poem">The fruit carries new seeds.</p>
-          <p data-i18n="loop.s4.text">The model writes new drafts. What speakers accept becomes the seeds of the next round.</p>
-        </article>
-      </div>
+        <p class="flow-return"><span aria-hidden="true">↩</span> <span class="v-story" data-i18n="loop.return">What passes goes into the book.</span><span class="v-ml" data-i18n="loop.ml.return">Reviewed data returns to the dataset.</span></p>
+      </article>
+      <span class="flow-arrow a6" data-from="5" aria-hidden="true"></span>
     </div>
-    <div class="returns">
-      <p class="return return-a"><b data-i18n="loop.return1.title">The seed learns from its fruit</b><span data-i18n="loop.return1.text">Corrections teach the model what is worth saying.</span></p>
-      <p class="return return-b"><b data-i18n="loop.return2.title">The roots reach for richer ground</b><span data-i18n="loop.return2.text">Results show where to collect next.</span></p>
-    </div>
+    <button type="button" id="loop-toggle" class="loop-toggle" data-i18n="loop.pause">Pause</button>
   </section>
 
   <section id="people" class="wrap">
