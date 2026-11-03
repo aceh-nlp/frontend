@@ -35,8 +35,8 @@ const STRINGS = {
     "join.cta": "Start reviewing",
     "join.contact": "To join as a specialist or partner, contact the project team.",
 
-    "footer.data": "Data in aceh-nlp-dataset",
-    "footer.api": "API in aceh-nlp-backend",
+    "footer.data": "Data in aceh-nlp/dataset",
+    "footer.api": "API in aceh-nlp/backend",
 
     "tab.review": "Review",
     "tab.try": "Try the model",
@@ -113,8 +113,8 @@ const STRINGS = {
     "join.cta": "Mulai meninjau",
     "join.contact": "Untuk bergabung sebagai spesialis atau mitra, hubungi tim proyek.",
 
-    "footer.data": "Data di aceh-nlp-dataset",
-    "footer.api": "API di aceh-nlp-backend",
+    "footer.data": "Data di aceh-nlp/dataset",
+    "footer.api": "API di aceh-nlp/backend",
 
     "tab.review": "Tinjau",
     "tab.try": "Coba modelnya",
@@ -179,8 +179,8 @@ const STRINGS = {
     "join.p": "Ureueng Aceh, gurèe, ahli basa, ngon lembaga jeuet meuikot. Ahli geupareksa ngon geupeubeutôi kalimat; ureueng nyang marit uroe-uroe geubri suara; mitra geubantu rekaman, izin, ngon peungajakan.",
     "join.cta": "Mulai pareksa",
     "join.contact": "Keu tamong sibagoe ahli atawa mitra, neuhubông tim proyek.",
-    "footer.data": "Data bak aceh-nlp-dataset",
-    "footer.api": "API bak aceh-nlp-backend",
+    "footer.data": "Data bak aceh-nlp/dataset",
+    "footer.api": "API bak aceh-nlp/backend",
     "tab.review": "Pareksa",
     "tab.try": "Cuba model nyoe",
     "login.title": "Tamong",
