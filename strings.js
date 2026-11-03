@@ -24,7 +24,7 @@ const STRINGS = {
     "lang.label": "Language",
 
     "hero.title": "A language lives where it is spoken.",
-    "hero.p1": "Acehnese is carried in kitchens, on fishing boats and over coffee, far from the data that trained today’s models. So we begin close to home, on Pulau Weh, with speakers gathering their own words, together.",
+    "hero.p1": "Acehnese is carried in kitchens, on fishing boats and over coffee, far from the data that trained today’s models. We are a small group from different backgrounds who came together on Pulau Weh, out of curiosity and care for the language, to help speakers gather their own words.",
     "hero.p2": "A language model can be more than a product. Held by a community, it becomes a living archive: one you can question, correct and teach, so knowledge keeps moving, as it always has, from one voice to the next.",
     "hero.p3": "Large models learned about Aceh from other people’s choices, and inherited their blind spots. Decolonising this technology starts with a simple shift: speakers decide what counts as data, who checks it, and what it is for.",
 
@@ -116,7 +116,7 @@ const STRINGS = {
     "lang.label": "Bahasa",
 
     "hero.title": "Bahasa hidup di tempat ia dituturkan.",
-    "hero.p1": "Bahasa Aceh dibawa di dapur, di atas perahu nelayan, dan di meja kopi, jauh dari data yang melatih model-model hari ini. Karena itu kami mulai dari dekat, di Pulau Weh, bersama para penutur yang mengumpulkan kata-kata mereka sendiri, bersama-sama.",
+    "hero.p1": "Bahasa Aceh dibawa di dapur, di atas perahu nelayan, dan di meja kopi, jauh dari data yang melatih model-model hari ini. Kami sekelompok kecil orang dengan latar belakang berbeda yang bertemu di Pulau Weh, karena rasa ingin tahu dan kepedulian pada bahasa ini, untuk membantu para penutur mengumpulkan kata-kata mereka sendiri.",
     "hero.p2": "Model bahasa bisa lebih dari sekadar produk. Di tangan komunitas, ia menjadi arsip hidup: yang bisa ditanya, dikoreksi, dan diajari, sehingga pengetahuan terus bergerak, seperti selama ini, dari satu suara ke suara berikutnya.",
     "hero.p3": "Model besar mengenal Aceh dari pilihan orang lain, dan mewarisi titik butanya. Dekolonisasi teknologi ini dimulai dari satu pergeseran sederhana: penuturlah yang menentukan apa yang dihitung sebagai data, siapa yang memeriksanya, dan untuk apa.",
 
@@ -204,7 +204,7 @@ const STRINGS = {
     "nav.home": "Hai proyek nyoe",
     "lang.label": "Basa",
     "hero.title": "Basa udep di teumpat geumarit.",
-    "hero.p1": "Basa Aceh geuba lam dapu, ateuh peurahô nelayan, ngon bak meja kupi, jioh nibak data nyang geulatéh model-model jinoe. Kareuna nyan kamoe mulai dari toe, di Pulo Weh, ngon ureueng nyang meututoe geukumpoi narit droe, meusajan.",
+    "hero.p1": "Basa Aceh geuba lam dapu, ateuh peurahô nelayan, ngon bak meja kupi, jioh nibak data nyang geulatéh model-model jinoe. Kamoe saboh kawan ubit nyang meubeda-beda latar, nyang meurumpok di Pulo Weh, kareuna hawa keuneuk teupeue ngon peuduli keu basa nyoe, keu bantu ureueng nyang meututoe geukumpoi narit droe.",
     "hero.p2": "Model basa jeuet leubèh nibak produk. Bak jaroe masyarakat, jih jeuet keu arsip udep: jeuet tatanyong, tapeubeutôi, ngon tapeurunoe, mangat teupeue teutap jijak, lagèe nyang ka sabé, dari saboh su u su laén.",
     "hero.p3": "Model rayek geuteupeue Aceh dari piléh ureueng laén, ngon jipeusaka titèk buta jih. Dekolonisasi teknologi nyoe geumulai ngon saboh meuubah nyang mudah: ureueng nyang meututoe nyang peutentèe peue nyang jeuet keu data, soe nyang pareksa, ngon keu peue.",
     "why.title": "Pakon nyoe peunteng",

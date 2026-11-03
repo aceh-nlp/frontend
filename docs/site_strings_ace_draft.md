@@ -54,9 +54,9 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **hero.p1**
-- ID: Bahasa Aceh dibawa di dapur, di atas perahu nelayan, dan di meja kopi, jauh dari data yang melatih model-model hari ini. Karena itu kami mulai dari dekat, di Pulau Weh, bersama para penutur yang mengumpulkan kata-kata mereka sendiri, bersama-sama.
-- EN: Acehnese is carried in kitchens, on fishing boats and over coffee, far from the data that trained today’s models. So we begin close to home, on Pulau Weh, with speakers gathering their own words, together.
-- ACE draft: Basa Aceh geuba lam dapu, ateuh peurahô nelayan, ngon bak meja kupi, jioh nibak data nyang geulatéh model-model jinoe. Kareuna nyan kamoe mulai dari toe, di Pulo Weh, ngon ureueng nyang meututoe geukumpoi narit droe, meusajan.
+- ID: Bahasa Aceh dibawa di dapur, di atas perahu nelayan, dan di meja kopi, jauh dari data yang melatih model-model hari ini. Kami sekelompok kecil orang dengan latar belakang berbeda yang bertemu di Pulau Weh, karena rasa ingin tahu dan kepedulian pada bahasa ini, untuk membantu para penutur mengumpulkan kata-kata mereka sendiri.
+- EN: Acehnese is carried in kitchens, on fishing boats and over coffee, far from the data that trained today’s models. We are a small group from different backgrounds who came together on Pulau Weh, out of curiosity and care for the language, to help speakers gather their own words.
+- ACE draft: Basa Aceh geuba lam dapu, ateuh peurahô nelayan, ngon bak meja kupi, jioh nibak data nyang geulatéh model-model jinoe. Kamoe saboh kawan ubit nyang meubeda-beda latar, nyang meurumpok di Pulo Weh, kareuna hawa keuneuk teupeue ngon peuduli keu basa nyoe, keu bantu ureueng nyang meututoe geukumpoi narit droe.
 - Koreksi:
 
 **hero.p2**
