@@ -110,9 +110,9 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **join.teach.text**
-- ID: Meninjau kalimat dan memutuskan soal ejaan.
-- EN: Review sentences and settle spelling.
-- ACE draft: Neupareksa kalimat ngon neupeutentèe ejaan.
+- ID: Kirimi kami tautan pelajaran bahasa Aceh, seperti video YouTube atau materi ajar.
+- EN: Send us links to Acehnese lessons, such as YouTube videos or teaching material.
+- ACE draft: Neupeugisa u kamoe link pelajaran basa Aceh, lagée video YouTube atawa bahan ajar.
 - Koreksi:
 
 **join.speak.title**
@@ -122,9 +122,9 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **join.speak.text**
-- ID: Mengoreksi draf dan menulis pemantik percakapan.
-- EN: Correct drafts and write conversation prompts.
-- ACE draft: Neupeubeutôi draf ngon neutuléh peunyo keu meututô.
+- ID: Beri nilai dan koreksi kalimat draf AI.
+- EN: Score and correct AI-drafted sentences.
+- ACE draft: Neubri nilai ngon neupeubeutôi kalimat draf AI.
 - Koreksi:
 
 **join.local.title**
