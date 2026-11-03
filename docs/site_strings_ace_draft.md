@@ -90,9 +90,9 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **how.l1.text**
-- ID: Penutur asli berpendidikan dari LSM dan lembaga menilai setiap kalimat 1–5, mengoreksi, dan memberi catatan. Ini data terbaik dan paling sedikit.
-- EN: Educated native speakers from NGOs and institutions rate each sentence 1–5, correct it and annotate it. This is the best data and the smallest.
-- ACE draft: Ureueng Aceh nyang meupeundidikan dari LSM ngon lembaga geunilai tiep kalimat 1–5, geupeubeutôi, ngon geubri catatan. Nyoe data nyang paleng gét ngon paleng dit.
+- ID: Kalimat yang diperiksa dan dikoreksi penutur asli berpendidikan dari LSM dan lembaga. Data terbaik dan paling sedikit.
+- EN: Sentences checked and corrected by educated native speakers from NGOs and institutions. The best data, and the smallest.
+- ACE draft: Kalimat nyang geupareksa ngon geupeubeutôi lé ureueng Aceh nyang meupeundidikan dari LSM ngon lembaga. Data nyang paleng gét ngon paleng dit.
 - Koreksi:
 
 **how.l2.title**
@@ -102,9 +102,9 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **how.l2.text**
-- ID: Penutur harian, rekaman, dan teks internet. Penutur cukup memberi +1 atau −1: apakah kalimatnya terdengar wajar.
-- EN: Daily speakers, recordings and internet text. Speakers give a quick +1 or −1 on whether a sentence sounds right.
-- ACE draft: Ureueng nyang marit uroe-uroe, rekaman, ngon teks dari internet. Ureueng cukôp geubri +1 atawa −1: peue kalimat nyan deuh wajar.
+- ID: Penutur harian, rekaman, dan teks internet, dengan pemeriksaan cepat oleh penutur.
+- EN: Daily speakers, recordings and internet text, with a quick check from speakers.
+- ACE draft: Ureueng nyang marit uroe-uroe, rekaman, ngon teks internet, ngon pareksa bacut lé ureueng Aceh.
 - Koreksi:
 
 **how.l3.title**
@@ -411,12 +411,6 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - ACE draft: droe di Pulo Weh
 - Koreksi:
 
-**demo.title**
-- ID: Seperti apa tinjauan itu
-- EN: What a review looks like
-- ACE draft: Kiban rupa pareksa
-- Koreksi:
-
 **demo.label**
 - ID: Draf AI, belum diperiksa
 - EN: AI draft, not yet checked
@@ -433,4 +427,42 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - ID: Lapisan
 - EN: Layer
 - ACE draft: Lapisan
+- Koreksi:
+
+## Added with the three-step section
+
+**how.s1.title**
+- ID: Pengumpulan data
+- EN: Data collection
+- ACE draft: Kumpoi data
+- Koreksi:
+
+**how.s1.text**
+- ID: Semuanya dimulai dari teks dan tuturan bahasa Aceh, yang dipilah menurut seberapa jauh bisa dipercaya.
+- EN: Everything starts with Acehnese text and speech, sorted by how far it can be trusted.
+- ACE draft: Bandum geumulai nibak teks ngon tutoe basa Aceh, nyang geupisah meunurot padum jeuet geupeucaya.
+- Koreksi:
+
+**how.s2.title**
+- ID: Anotasi
+- EN: Annotation
+- ACE draft: Anotasi
+- Koreksi:
+
+**how.s2.text**
+- ID: Penutur meninjau setiap kalimat. Spesialis memberi nilai 1–5, mengoreksi, dan memberi catatan. Penutur sehari-hari cukup memberi +1 atau −1.
+- EN: Speakers review each sentence. Specialists rate it 1–5, correct it and annotate it. Everyday speakers give a quick +1 or −1.
+- ACE draft: Ureueng Aceh geupareksa tiep kalimat. Ahli geubri nilai 1–5, geupeubeutôi, ngon geubri catatan. Ureueng nyang marit uroe-uroe cukôp geubri +1 atawa −1.
+- Koreksi:
+
+**how.s3.title**
+- ID: Pelatihan dan evaluasi
+- EN: Training and evaluation
+- ACE draft: Latéh ngon evaluasi
+- Koreksi:
+
+**how.s3.text**
+- ID: Data yang sudah ditinjau melatih model bahasa. Sebagian data yang diperiksa disisihkan dan tidak pernah dipakai untuk melatih, sehingga model diuji pada kalimat yang belum pernah dilihatnya, dan penuturlah yang menilai hasilnya. Tahap ini dimulai setelah cukup banyak kalimat diperiksa.
+- EN: Reviewed data trains language models. Part of the checked data is held back and never trained on, so models are tested on sentences they have not seen, and speakers judge the results. This step starts once enough sentences are checked.
+- ACE draft: Data nyang ka geupareksa geupeuguna keu latéh model basa. Siseun data nyang ka geupareksa geupeuasoe, hana geupeuguna keu latéh, mangat model geuuji ngon kalimat nyang gohlom jikalon, ngon ureueng Aceh nyang nilai hasé jih. Tahap nyoe geumulai meunyo ka le kalimat geupareksa.
 - Koreksi:
