@@ -168,7 +168,6 @@ button:disabled { opacity: .5; cursor: default; filter: none; }
 .roles .button { margin-top: 14px; }
 .join-contact { color: var(--on-sea-muted); font-size: .95rem; margin-bottom: 0; }
 .join-contact a { display: inline-block; padding-block: 4px; color: var(--on-sea); font-weight: 600; }
-.site-footer { display: flex; flex-wrap: wrap; gap: 8px 20px; padding-block: 22px 30px; font-size: .88rem; }
 .github-link { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-left: -9px; color: var(--muted); }
 .github-link:hover { color: var(--accent); }
 
