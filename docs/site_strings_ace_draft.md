@@ -259,12 +259,6 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - ACE draft: Catatan
 - Koreksi:
 
-**review.vote.hint**
-- ID: +1 = terdengar wajar · −1 = terdengar salah
-- EN: +1 = sounds right · −1 = sounds wrong
-- ACE draft: +1 = deuh wajar · −1 = deuh salah
-- Koreksi:
-
 **review.done.title**
 - ID: Selesai 🎉
 - EN: All done 🎉
@@ -464,9 +458,9 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **loop.others.text**
-- ID: Cukup +1 atau −1.
-- EN: A quick +1 or −1.
-- ACE draft: Cukôp +1 atawa −1.
+- ID: Nanti: membandingkan dua jawaban atas satu pertanyaan, memberi +1 untuk yang lebih baik dan −1 untuk yang lain.
+- EN: Later: compare two answers to one question, and give the better one +1 and the other −1.
+- ACE draft: Teuma: geubandéng dua jaweueb keu saboh teunanyöng, geubri +1 keu nyang leubèh gét ngon −1 keu nyang laén.
 - Koreksi:
 
 **loop.return**
@@ -547,4 +541,24 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - ID: Data yang ditinjau kembali ke dataset.
 - EN: Reviewed data returns to the dataset.
 - ACE draft: Data nyang ka geupareksa jiwoe u dataset.
+- Koreksi:
+
+## Review closed notice
+
+**review.closed.title**
+- ID: Tinjauan saat ini dibuka untuk spesialis
+- EN: Review is open to specialists for now
+- ACE draft: Pareksa jinoe teubuka keu ahli
+- Koreksi:
+
+**review.closed.text**
+- ID: Penutur sehari-hari nanti akan membandingkan dua jawaban dan memilih yang lebih baik. Sementara itu, ada cara lain untuk membantu.
+- EN: Everyday speakers will soon compare two answers and pick the better one. Until then, there are other ways to help.
+- ACE draft: Ureueng nyang marit uroe-uroe teuma geubandéng dua jaweueb ngon geupiléh nyang leubèh gét. Sigohlom nyan, na cara laén keu meubantu.
+- Koreksi:
+
+**review.closed.link**
+- ID: Bergabung dengan proyek
+- EN: Join the project
+- ACE draft: Tamong lam proyek nyoe
 - Koreksi:

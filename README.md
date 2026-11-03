@@ -23,9 +23,9 @@ What it does:
 - **Sign-in** (email + name + dialect; a Google Sign-In button appears
   automatically when the backend reports a configured Google client id) — every
   rating is recorded under the evaluator's identity.
-- **Review**: pick a dataset and review each item. Specialists give a 1–5 score,
-  optionally with a correction and annotation. Everyone else gives +1 or -1. The
-  backend decides the tier. Auto-advances and auto-saves on each review.
+- **Review**: open to specialists for now (the backend decides). They pick a
+  dataset and give each item a 1–5 score, optionally with a correction and
+  annotation. Everyone else sees a short notice.
 - **Upload**: a coordinator uploads a JSON/JSONL file of pairs for speakers to review.
 
 ## Deploy

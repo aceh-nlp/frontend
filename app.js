@@ -6,7 +6,6 @@ const $ = (id) => document.getElementById(id);
 let token = localStorage.getItem("aceh_token") || "";
 let profile = null;
 let current = { dataset: null, queue: [], item: null };
-let tier = "everyday";
 let lastProgress = null;
 
 // The sentence being reviewed is shown large; these never need showing.
@@ -39,7 +38,7 @@ async function api(path, { method = "GET", body } = {}) {
 }
 
 function show(view) {
-  for (const v of ["login", "datasets", "review"]) $("view-" + v).hidden = v !== view;
+  for (const v of ["login", "closed", "datasets", "review"]) $("view-" + v).hidden = v !== view;
 }
 
 function setWho() {
@@ -123,6 +122,8 @@ function initGoogle(clientId) {
 /* ---------- datasets ---------- */
 
 async function openDatasets() {
+  // Only specialists review for now; the backend enforces this too.
+  if ((await api("/me")).tier !== "specialist") return show("closed");
   show("datasets");
   const { datasets } = await api("/datasets");
   const ul = $("dataset-list");
@@ -182,9 +183,6 @@ $("upload-form").addEventListener("submit", async (e) => {
 
 async function openReview(dataset) {
   current = { dataset, queue: [], item: null };
-  tier = (await api("/me")).tier;
-  $("specialist-controls").hidden = tier !== "specialist";
-  $("everyday-controls").hidden = tier !== "everyday";
   show("review");
   await refill();
 }
@@ -260,12 +258,6 @@ $("score-buttons").addEventListener("click", (e) => {
   if ($("correction").value.trim()) fields.correction = $("correction").value.trim();
   if ($("annotation").value.trim()) fields.annotation = $("annotation").value.trim();
   submitReview(fields);
-});
-
-$("vote-buttons").addEventListener("click", (e) => {
-  const vote = e.target.dataset?.vote;
-  if (!vote || !current.item) return;
-  submitReview({ vote: Number(vote) });
 });
 
 $("back").addEventListener("click", openDatasets);

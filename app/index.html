@@ -68,13 +68,19 @@
       </details>
     </section>
 
+    <section id="view-closed" hidden>
+      <h2 data-i18n="review.closed.title">Review is open to specialists for now</h2>
+      <p class="muted" data-i18n="review.closed.text">Everyday speakers will soon compare two answers and pick the better one. Until then, there are other ways to help.</p>
+      <p><a class="button" href="/#join" data-i18n="review.closed.link">Join the project</a></p>
+    </section>
+
     <section id="view-review" hidden>
       <button id="back" class="linklike" data-i18n="review.back">← datasets</button>
       <div id="progress" class="muted"></div>
       <div class="progress"><span id="progress-bar"></span></div>
       <article id="card">
         <div id="card-fields"></div>
-        <div id="specialist-controls" hidden>
+        <div id="specialist-controls">
           <label><span data-i18n="review.correction">Correction</span>
             <textarea id="correction" rows="2"></textarea></label>
           <label><span data-i18n="review.annotation">Annotation</span>
@@ -85,12 +91,6 @@
             <button data-score="5">5</button>
           </div>
           <p class="muted" data-i18n="review.score.hint"></p>
-        </div>
-        <div id="everyday-controls" hidden>
-          <div class="rate-row" id="vote-buttons">
-            <button data-vote="1">+1</button><button data-vote="-1">−1</button>
-          </div>
-          <p class="muted" data-i18n="review.vote.hint"></p>
         </div>
       </article>
       <div id="done-msg" hidden>
