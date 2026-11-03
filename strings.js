@@ -7,7 +7,6 @@ const STRINGS = {
   en: {
     "stat.speakers.n": "3.4 million",
     "stat.speakers": "people speak Acehnese",
-    "stat.drafts": "AI-drafted sentences waiting for speakers",
     "stat.team": "of us on Pulau Weh",
     "demo.label": "AI draft, not yet checked",
     "demo.translation": "I get up at five in the morning.",
@@ -120,7 +119,6 @@ const STRINGS = {
   id: {
     "stat.speakers.n": "3,4 juta",
     "stat.speakers": "orang berbahasa Aceh",
-    "stat.drafts": "kalimat buatan AI menunggu penutur",
     "stat.team": "orang di Pulau Weh",
     "demo.label": "Draf AI, belum diperiksa",
     "demo.translation": "Saya bangun jam lima pagi.",
@@ -234,7 +232,6 @@ const STRINGS = {
   // Source sheet: aceh_nlp/docs/site_strings_ace_draft.md. Replace lines as corrections arrive.
   ace: {
     "stat.speakers": "ureueng meututoe basa Aceh",
-    "stat.drafts": "kalimat buatan AI preh ureueng Aceh",
     "stat.team": "droe di Pulo Weh",
     "demo.label": "Draf AI, gohlom geupareksa",
     "demo.question": "Peue nyoe deuh wajar bak droeneuh?",

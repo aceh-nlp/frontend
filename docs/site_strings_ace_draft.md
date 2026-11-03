@@ -399,12 +399,6 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - ACE draft: ureueng meututoe basa Aceh
 - Koreksi:
 
-**stat.drafts**
-- ID: kalimat buatan AI menunggu penutur
-- EN: AI-drafted sentences waiting for speakers
-- ACE draft: kalimat buatan AI preh ureueng Aceh
-- Koreksi:
-
 **stat.team**
 - ID: orang di Pulau Weh
 - EN: of us on Pulau Weh

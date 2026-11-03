@@ -78,7 +78,7 @@ button:disabled { opacity: .5; cursor: default; filter: none; }
 .wrap-notice { max-width: 1000px; margin: 4px auto 0; width: calc(100% - 40px); }
 
 /* numbers */
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding-block: 28px 12px; }
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 300px)); gap: 24px; padding-block: 28px 12px; }
 .stats b { display: block; font: 600 clamp(1.7rem, 4.5vw, 2.6rem)/1.1 var(--serif); color: var(--accent); }
 .stats span { display: block; color: var(--muted); font-size: .95rem; margin-top: 4px; }
 
