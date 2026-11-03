@@ -5,9 +5,9 @@
 Indonesian and English), `style.css` — no build step, no server code, no
 stored data. Everything goes through the
 same-origin `/api/*` of
-[aceh-nlp-backend](https://github.com/aceh-nlp/backend); datasets live
-in [aceh-nlp-dataset](https://github.com/aceh-nlp/dataset) and the model
-behind "Try the model" in [aceh-nlp-gpu](https://github.com/aceh-nlp/gpu).
+[aceh-nlp/backend](https://github.com/aceh-nlp/backend); datasets live
+in [aceh-nlp/dataset](https://github.com/aceh-nlp/dataset) and the model
+behind "Try the model" in [aceh-nlp/gpu](https://github.com/aceh-nlp/gpu).
 
 What it does:
 - **Landing page** (`/`): why the project exists, how the three data layers
