@@ -46,15 +46,24 @@
             <option value="other" data-i18n="login.dialect.other">Other</option>
           </select>
         </label>
-        <button type="submit" data-i18n="login.submit">Sign in</button>
+        <p id="login-error" class="form-error" role="alert" hidden></p>
+        <button type="submit" data-i18n="login.submit">Email me a code</button>
       </form>
-      <div id="google-signin"></div>
+      <form id="code-form" hidden>
+        <p role="status" data-i18n="login.sent">We've sent a code to your email. It can take a minute, so check your spam folder too.</p>
+        <label><span data-i18n="login.code">Code</span>
+          <input type="text" id="login-code" required inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6"></label>
+        <p id="code-error" class="form-error" role="alert" hidden></p>
+        <button type="submit" data-i18n="login.verify">Sign in</button>
+        <button type="button" id="code-back" class="linklike" data-i18n="login.back">Use a different email or send again</button>
+      </form>
     </section>
 
     <section id="view-datasets" hidden>
       <h2 data-i18n="datasets.title">Choose a dataset to review</h2>
       <ul id="dataset-list" class="cards"></ul>
-      <details>
+      <p><button id="sign-out" type="button" class="linklike" data-i18n="login.out">Sign out</button></p>
+      <details id="coordinator" hidden>
         <summary data-i18n="coordinator.title">Coordinator</summary>
         <h3 data-i18n="upload.title">Upload a dataset</h3>
         <form id="upload-form">
@@ -68,12 +77,6 @@
       </details>
     </section>
 
-    <section id="view-closed" hidden>
-      <h2 data-i18n="review.closed.title">Review is open to specialists for now</h2>
-      <p class="muted" data-i18n="review.closed.text">Specialists need to sign in with Google, using the account on our list. To become a specialist, or to help in other ways, see the Join section. Everyday speakers will later compare two answers and pick the better one.</p>
-      <p><a class="button" href="/#join" data-i18n="review.closed.link">Join the project</a></p>
-      <p><button id="closed-again" type="button" class="linklike" data-i18n="review.closed.again">Sign in with another account</button></p>
-    </section>
 
     <section id="view-review" hidden>
       <button id="back" class="linklike" data-i18n="review.back">← datasets</button>
@@ -81,7 +84,7 @@
       <div class="progress"><span id="progress-bar"></span></div>
       <article id="card">
         <div id="card-fields"></div>
-        <div id="specialist-controls">
+        <div id="review-controls">
           <label><span data-i18n="review.correction">Correction</span>
             <textarea id="correction" rows="2"></textarea></label>
           <label><span data-i18n="review.annotation">Annotation</span>

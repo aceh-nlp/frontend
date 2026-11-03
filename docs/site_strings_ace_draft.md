@@ -24,9 +24,9 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **nav.review**
-- ID: Tinjauan spesialis
-- EN: Specialist review
-- ACE draft: Pareksa lé ahli
+- ID: Tinjau kalimat
+- EN: Review sentences
+- ACE draft: Pareksa kalimat
 - Koreksi:
 
 **nav.try**
@@ -98,9 +98,9 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **join.cta**
-- ID: Spesialis: mulai meninjau
-- EN: Specialists: start reviewing
-- ACE draft: Ahli: mulai pareksa
+- ID: Mulai meninjau
+- EN: Start reviewing
+- ACE draft: Mulai pareksa
 - Koreksi:
 
 **join.teach.title**
@@ -244,9 +244,9 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **login.note**
-- ID: Tinjauan Anda dicatat dengan email Anda agar kami tahu siapa menilai apa. Tanpa kata sandi — cukup perkenalkan diri.
-- EN: Your reviews are recorded under your email so we know who evaluated what. No password — just identify yourself.
-- ACE draft: Hasé pareksa droeneuh geucatat ngon email droeneuh mangat kamoe meuteupeue soe nyang nilai peue. Hana kata sandi — cukôp neupeuturi droe.
+- ID: Tinjauan Anda dicatat dengan email dan dialek Anda agar kami tahu siapa menilai apa. Kami mengirim kode sekali pakai ke email Anda; tidak ada kata sandi.
+- EN: Your reviews are recorded under your email and dialect so we know who evaluated what. We email you a one-time code; there is no password.
+- ACE draft: Hasé pareksa droeneuh geucatat ngon email ngon dialék droeneuh mangat kamoe meuteupeue soe nyang nilai peue. Kamoe peugisa kode sigo pakai u email droeneuh; hana kata sandi.
 - Koreksi:
 
 **login.email**
@@ -286,9 +286,63 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **login.submit**
+- ID: Kirim kode ke email saya
+- EN: Email me a code
+- ACE draft: Peugisa kode u email lôn
+- Koreksi:
+
+**login.sent**
+- ID: Kami sudah mengirim kode ke email Anda. Mungkin perlu semenit, jadi periksa juga folder spam.
+- EN: We've sent a code to your email. It can take a minute, so check your spam folder too.
+- ACE draft: Kamoe ka peugisa kode u email droeneuh. Mungkin peureulèe sigeundèt, nyan pasai neukalon cit folder spam.
+- Koreksi:
+
+**login.code**
+- ID: Kode
+- EN: Code
+- ACE draft: Kode
+- Koreksi:
+
+**login.verify**
 - ID: Masuk
 - EN: Sign in
 - ACE draft: Tamong
+- Koreksi:
+
+**login.back**
+- ID: Pakai email lain atau kirim lagi
+- EN: Use a different email or send again
+- ACE draft: Pakai email laén atawa peugisa lom
+- Koreksi:
+
+**login.limit**
+- ID: Terlalu banyak kode untuk saat ini. Pakai kode terakhir yang kami kirim, atau coba lagi nanti.
+- EN: Too many codes for now. Use the last one we sent, or try again later.
+- ACE draft: Ka le that kode keu jinoe. Neupakai kode nyang paléng akhé, atawa neucuba lom teuma.
+- Koreksi:
+
+**login.later**
+- ID: Ada masalah di pihak kami. Silakan coba lagi nanti.
+- EN: Something went wrong on our side. Please try again later.
+- ACE draft: Na masalah bak kamoe. Neucuba lom teuma.
+- Koreksi:
+
+**login.bademail**
+- ID: Alamat email itu sepertinya salah. Silakan periksa lagi.
+- EN: That email address doesn't look right. Please check it.
+- ACE draft: Alamat email nyan meunan salah. Neupareksa lom.
+- Koreksi:
+
+**login.out**
+- ID: Keluar
+- EN: Sign out
+- ACE draft: Teubiet
+- Koreksi:
+
+**login.wrong**
+- ID: Kode itu salah atau sudah kedaluwarsa. Periksa lagi, atau minta kode baru.
+- EN: That code is wrong or has expired. Check it, or ask for a new one.
+- ACE draft: Kode nyan salah atawa ka abéh watèe. Neupareksa lom, atawa neulakèe kode barô.
 - Koreksi:
 
 **datasets.title**
@@ -571,9 +625,9 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **loop.others.text**
-- ID: Nanti: membandingkan dua jawaban atas satu pertanyaan, memberi +1 untuk yang lebih baik dan −1 untuk yang lain.
-- EN: Later: compare two answers to one question, and give the better one +1 and the other −1.
-- ACE draft: Teuma: geubandéng dua jaweueb keu saboh teunanyöng, geubri +1 keu nyang leubèh gét ngon −1 keu nyang laén.
+- ID: Untuk saat ini, juga memberi nilai 1–5, mengoreksi, dan mencatat. Nanti: membandingkan dua jawaban atas satu pertanyaan, memberi +1 untuk yang lebih baik dan −1 untuk yang lain.
+- EN: For now, score 1–5, correct and annotate too. Later: compare two answers to one question, and give the better one +1 and the other −1.
+- ACE draft: Keu jinoe, neubri nilai 1–5, neupeubeutôi, ngon neubri catatan cit. Teuma: geubandéng dua jaweueb keu saboh teunanyöng, geubri +1 keu nyang leubèh gét ngon −1 keu nyang laén.
 - Koreksi:
 
 **loop.return**
@@ -654,32 +708,6 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - ID: Data yang ditinjau kembali ke dataset.
 - EN: Reviewed data returns to the dataset.
 - ACE draft: Data nyang ka geupareksa jiwoe u dataset.
-- Koreksi:
-
-## Review closed notice
-
-**review.closed.title**
-- ID: Tinjauan saat ini dibuka untuk spesialis
-- EN: Review is open to specialists for now
-- ACE draft: Pareksa jinoe teubuka keu ahli
-- Koreksi:
-
-**review.closed.text**
-- ID: Spesialis perlu masuk dengan Google, memakai akun yang ada di daftar kami. Untuk menjadi spesialis, atau membantu dengan cara lain, lihat bagian Bergabung. Penutur sehari-hari nanti akan membandingkan dua jawaban dan memilih yang lebih baik.
-- EN: Specialists need to sign in with Google, using the account on our list. To become a specialist, or to help in other ways, see the Join section. Everyday speakers will later compare two answers and pick the better one.
-- ACE draft: Ahli peureulèe tamong ngon Google, ngon akun nyang na lam daftar kamoe. Keu jeuet keu ahli, atawa keu meubantu ngon cara laén, neukalon bagian Tamong. Ureueng nyang marit uroe-uroe teuma geubandéng dua jaweueb ngon geupiléh nyang leubèh gét.
-- Koreksi:
-
-**review.closed.link**
-- ID: Bergabung dengan proyek
-- EN: Join the project
-- ACE draft: Tamong lam proyek nyoe
-- Koreksi:
-
-**review.closed.again**
-- ID: Masuk dengan akun lain
-- EN: Sign in with another account
-- ACE draft: Tamong ngon akun laén
 - Koreksi:
 
 ## Small labels and the draft notice

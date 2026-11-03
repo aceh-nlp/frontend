@@ -14,9 +14,10 @@ export default {
     headers.delete("host");
     // Ask the server for an uncompressed body; Cloudflare compresses to the client itself.
     headers.delete("accept-encoding");
-    // The backend's per-IP limit reads the first X-Forwarded-For value.
+    // The backend's per-visitor limits read this. Caddy replaces X-Forwarded-For with its
+    // peer, which here is Cloudflare, so that header would not name the visitor.
     const ip = request.headers.get("CF-Connecting-IP");
-    if (ip) headers.set("X-Forwarded-For", ip);
+    if (ip) headers.set("X-Aceh-Client-IP", ip);
 
     const init = { method: request.method, headers, redirect: "manual" };
     if (request.method !== "GET" && request.method !== "HEAD") init.body = request.body;

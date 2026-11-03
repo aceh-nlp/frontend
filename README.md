@@ -20,13 +20,12 @@ What it does:
   native-speaker correction (source sheet:
   [docs/site_strings_ace_draft.md](docs/site_strings_ace_draft.md)); the site
   shows a notice when Acehnese is selected.
-- **Sign-in** (email + name + dialect; a Google Sign-In button appears
-  automatically when the backend reports a configured Google client id) — every
-  rating is recorded under the evaluator's identity.
-- **Review**: open to specialists for now (the backend decides). They pick a
-  dataset and give each item a 1–5 score, optionally with a correction and
-  annotation. Everyone else sees a short notice.
-- **Upload**: a coordinator uploads a JSON/JSONL file of pairs for speakers to review.
+- **Sign-in** (email + name + dialect, then a one-time code sent to that email) —
+  every rating is recorded under the evaluator's identity.
+- **Review**: open to anyone signed in. They pick a dataset and give each item a
+  1–5 score, optionally with a correction and annotation.
+- **Upload**: someone on the backend's specialist list uploads a JSON/JSONL file of
+  pairs for speakers to review.
 
 ## Deploy
 

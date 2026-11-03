@@ -209,6 +209,7 @@ summary { cursor: pointer; color: var(--accent); font-weight: 500; }
 .meta { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0 0 12px; font-size: .84rem; color: var(--muted); }
 .field { margin: 10px 0 0; font-size: .97rem; }
 .field b { display: block; font-size: .76rem; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.form-error { color: var(--coral-ink); font-weight: 600; }
 .rate-row { display: flex; gap: 10px; margin: 18px 0 6px; }
 .rate-row button { flex: 1; min-width: 0; min-height: 54px; padding-inline: 4px; font-size: 1.2rem; }
 pre { white-space: pre-wrap; overflow-wrap: anywhere; font: 1rem/1.6 var(--sans); }

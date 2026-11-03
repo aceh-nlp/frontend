@@ -1,5 +1,5 @@
 /* Aceh NLP tool page — interface only; all state lives behind /api (same origin).
-   Two tabs: Review (sign-in, tiered controls) and Try the model (open to anyone). */
+   Two tabs: Review (sign-in) and Try the model (open to anyone). */
 "use strict";
 
 const $ = (id) => document.getElementById(id);
@@ -33,12 +33,14 @@ async function api(path, { method = "GET", body } = {}) {
     body: body !== undefined ? JSON.stringify(body) : undefined,
   });
   const data = await resp.json().catch(() => ({ error: "Bad response" }));
-  if (!resp.ok) throw new Error(data.error || resp.statusText);
+  // A refused token is over: back to the sign-in form.
+  if (resp.status === 401 && token && !path.startsWith("/login")) { localStorage.removeItem("aceh_token"); location.reload(); }
+  if (!resp.ok) throw Object.assign(new Error(data.error || resp.statusText), { status: resp.status });
   return data;
 }
 
 function show(view) {
-  for (const v of ["login", "closed", "datasets", "review"]) $("view-" + v).hidden = v !== view;
+  for (const v of ["login", "datasets", "review"]) $("view-" + v).hidden = v !== view;
 }
 
 function setWho() {
@@ -73,63 +75,77 @@ async function start() {
       const me = await api("/me");
       profile = me.profile;
       setWho();
-      return openDatasets();
-    } catch { token = ""; localStorage.removeItem("aceh_token"); }
+      return await openDatasets();
+    } catch { /* server unreachable: the token stays for the next visit */ }
   }
   show("login");
-  try {
-    const health = await api("/health");
-    if (health.google_client_id) initGoogle(health.google_client_id);
-  } catch { /* backend down; form still renders */ }
 }
+
+function showError(id, key) {
+  // Through data-i18n, so the message follows a change of language.
+  $(id).dataset.i18n = key;
+  $(id).textContent = t(key);
+  $(id).hidden = false;
+}
+
+function showCodeStep(on) {
+  $("login-form").hidden = on;
+  $("code-form").hidden = !on;
+  $("login-error").hidden = $("code-error").hidden = true;
+  if (on) { $("login-code").value = ""; $("login-code").focus(); }
+}
+
+let challenge = "";
 
 $("login-form").addEventListener("submit", async (e) => {
   e.preventDefault();
+  $("login-error").hidden = true;
   try {
-    const data = await api("/login", { method: "POST", body: {
-      email: $("login-email").value.trim(),
+    const data = await api("/login/start", { method: "POST", body: { email: $("login-email").value.trim() } });
+    challenge = data.challenge;
+    showCodeStep(true);
+  } catch (err) {
+    if (err.status === 429 && challenge) {
+      // The message says to use the last code, so offer the place to type it.
+      showCodeStep(true);
+      showError("code-error", "login.limit");
+    } else {
+      showError("login-error", err.status === 429 ? "login.limit"
+        : err.status === 400 ? "login.bademail" : "login.later");
+    }
+  }
+});
+
+$("code-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  $("code-error").hidden = true;
+  try {
+    const data = await api("/login/verify", { method: "POST", body: {
+      challenge,
+      code: $("login-code").value.trim(),
       name: $("login-name").value.trim(),
       dialect: $("login-dialect").value,
     }});
     token = data.token; profile = data.profile;
     localStorage.setItem("aceh_token", token);
     setWho(); openDatasets();
-  } catch (err) { alert(err.message); }
+  } catch (err) {
+    showError("code-error", err.status === 401 ? "login.wrong" : "login.later");
+  }
 });
 
-// The notice's way back to the sign-in form, for a specialist who used the email form.
-$("closed-again").addEventListener("click", () => {
+$("code-back").addEventListener("click", () => showCodeStep(false));
+
+$("sign-out").addEventListener("click", () => {
   localStorage.removeItem("aceh_token");
   location.reload();
 });
 
-function initGoogle(clientId) {
-  const s = document.createElement("script");
-  s.src = "https://accounts.google.com/gsi/client";
-  s.onload = () => {
-    google.accounts.id.initialize({
-      client_id: clientId,
-      callback: async (resp) => {
-        try {
-          const data = await api("/login", { method: "POST", body: {
-            google_id_token: resp.credential, dialect: $("login-dialect").value,
-          }});
-          token = data.token; profile = data.profile;
-          localStorage.setItem("aceh_token", token);
-          setWho(); openDatasets();
-        } catch (err) { alert(err.message); }
-      },
-    });
-    google.accounts.id.renderButton($("google-signin"), { theme: "outline", size: "large" });
-  };
-  document.head.appendChild(s);
-}
-
 /* ---------- datasets ---------- */
 
 async function openDatasets() {
-  // Only specialists review for now; the backend enforces this too.
-  if ((await api("/me")).tier !== "specialist") return show("closed");
+  // Uploads put data in front of every reviewer, so only listed people get the form.
+  $("coordinator").hidden = (await api("/me")).tier !== "specialist";
   show("datasets");
   const { datasets } = await api("/datasets");
   const ul = $("dataset-list");
@@ -248,13 +264,17 @@ function next() {
   $("annotation").value = "";
 }
 
+let saving = false;
+
 async function submitReview(fields) {
   const body = { dataset: current.dataset, item_id: current.item.id, ...fields };
+  if (saving) return;
+  saving = true;
   try {
     await api("/ratings", { method: "POST", body });
     if (lastProgress) { lastProgress.remaining -= 1; renderProgress(); }
     if (current.queue.length) next(); else await refill();
-  } catch (err) { alert(err.message); }
+  } catch (err) { alert(err.message); } finally { saving = false; }
 }
 
 $("score-buttons").addEventListener("click", (e) => {
