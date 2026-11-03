@@ -5,6 +5,18 @@
 
 const STRINGS = {
   en: {
+    "stat.speakers.n": "3.4 million",
+    "stat.speakers": "people speak Acehnese",
+    "stat.drafts": "AI-drafted sentences waiting for speakers",
+    "stat.team": "of us on Pulau Weh",
+    "demo.title": "What a review looks like",
+    "demo.label": "AI draft, not yet checked",
+    "demo.translation": "I get up at five in the morning.",
+    "demo.question": "Does this sound right to you?",
+    "datasets.layer": "Layer",
+    "field.ind": "Indonesian",
+    "field.eng": "English",
+    "field.eng_summary": "English summary",
     "site.title": "Aceh NLP",
     "nav.review": "Review sentences",
     "nav.try": "Try the model",
@@ -83,6 +95,18 @@ const STRINGS = {
   },
 
   id: {
+    "stat.speakers.n": "3,4 juta",
+    "stat.speakers": "orang berbahasa Aceh",
+    "stat.drafts": "kalimat buatan AI menunggu penutur",
+    "stat.team": "orang di Pulau Weh",
+    "demo.title": "Seperti apa tinjauan itu",
+    "demo.label": "Draf AI, belum diperiksa",
+    "demo.translation": "Saya bangun jam lima pagi.",
+    "demo.question": "Apakah ini terdengar wajar bagi Anda?",
+    "datasets.layer": "Lapisan",
+    "field.ind": "Bahasa Indonesia",
+    "field.eng": "Bahasa Inggris",
+    "field.eng_summary": "Ringkasan bahasa Inggris",
     "site.title": "Aceh NLP",
     "nav.review": "Tinjau kalimat",
     "nav.try": "Coba modelnya",
@@ -163,6 +187,13 @@ const STRINGS = {
   // Acehnese: AI DRAFT (Claude, Nov 2026) awaiting native-speaker correction.
   // Source sheet: aceh_nlp/docs/site_strings_ace_draft.md. Replace lines as corrections arrive.
   ace: {
+    "stat.speakers": "ureueng meututoe basa Aceh",
+    "stat.drafts": "kalimat buatan AI preh ureueng Aceh",
+    "stat.team": "droe di Pulo Weh",
+    "demo.title": "Kiban rupa pareksa",
+    "demo.label": "Draf AI, gohlom geupareksa",
+    "demo.question": "Peue nyoe deuh wajar bak droeneuh?",
+    "datasets.layer": "Lapisan",
     "site.title": "Aceh NLP",
     "nav.review": "Pareksa kalimat",
     "nav.try": "Cuba model nyoe",

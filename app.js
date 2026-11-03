@@ -9,6 +9,21 @@ let current = { dataset: null, queue: [], item: null };
 let tier = "everyday";
 let lastProgress = null;
 
+// The sentence being reviewed is shown large; these never need showing.
+const PRIMARY_FIELDS = ["ace_draft", "ace", "aceh", "question", "prompt_ace"];
+const HIDDEN_FIELDS = new Set(["id", "type", "verified"]);
+const META_FIELDS = new Set(["section", "setting", "speaker", "dialogue", "turn", "title"]);
+
+function datasetLabel(name) {
+  const parts = name.split("/");
+  const layer = /^layer_(\d)/.exec(parts[0]);
+  const title = (parts[0] === "upload" || layer) ? parts[1] : parts[parts.length - 1];
+  return {
+    chip: layer ? `${t("datasets.layer")} ${layer[1]}` : parts[0] === "upload" ? "Upload" : "",
+    title: (title || name).replaceAll("_", " "),
+  };
+}
+
 async function api(path, { method = "GET", body } = {}) {
   const resp = await fetch("/api" + path, {
     method,
@@ -112,15 +127,36 @@ async function openDatasets() {
   const { datasets } = await api("/datasets");
   const ul = $("dataset-list");
   ul.innerHTML = "";
-  for (const d of datasets) {
+  // raw/ holds source files for the merged dataset; coordinators still get them below.
+  const reviewable = datasets.filter((d) => !d.dataset.includes("/raw/"));
+  for (const d of reviewable) {
     const li = document.createElement("li");
     const btn = document.createElement("button");
-    btn.textContent = `${d.dataset} (${d.rows} ${t("datasets.items")})`;
+    const { chip, title } = datasetLabel(d.dataset);
+    const name = document.createElement("span");
+    if (chip) {
+      const c = document.createElement("span");
+      c.className = "chip";
+      c.textContent = chip;
+      name.appendChild(c);
+    }
+    name.appendChild(document.createTextNode(title));
+    const count = document.createElement("small");
+    count.textContent = `${d.rows} ${t("datasets.items")}`;
+    btn.title = d.dataset;
+    btn.append(name, count);
     btn.addEventListener("click", () => openReview(d.dataset));
     li.appendChild(btn);
     ul.appendChild(li);
   }
-  if (!datasets.length) {
+  const names = $("dataset-names");
+  names.innerHTML = "";
+  for (const d of datasets) {
+    const o = document.createElement("option");
+    o.value = d.dataset;
+    names.appendChild(o);
+  }
+  if (!reviewable.length) {
     ul.innerHTML = "";
     const li = document.createElement("li");
     li.className = "muted";
@@ -176,7 +212,8 @@ async function openReview(dataset) {
 function renderProgress() {
   if (!lastProgress) return;
   const { total, remaining } = lastProgress;
-  $("progress").textContent = `${current.dataset} — ${total - remaining}/${total} ${t("review.rated")}`;
+  $("progress").textContent = `${datasetLabel(current.dataset).title} — ${total - remaining}/${total} ${t("review.rated")}`;
+  $("progress-bar").style.width = `${total ? ((total - remaining) / total) * 100 : 0}%`;
 }
 
 async function refill() {
@@ -194,13 +231,33 @@ function next() {
   if (!current.item) return;
   const holder = $("card-fields");
   holder.innerHTML = "";
-  for (const [k, v] of Object.entries(current.item)) {
-    if (k === "id" || v === null || typeof v === "object") continue;
+  const item = current.item;
+  const primary = PRIMARY_FIELDS.find((k) => typeof item[k] === "string" && item[k]);
+  const meta = document.createElement("p");
+  meta.className = "meta";
+  const rest = [];
+  for (const [k, v] of Object.entries(item)) {
+    if (k === primary || HIDDEN_FIELDS.has(k) || v === null || typeof v === "object") continue;
+    if (META_FIELDS.has(k)) {
+      const s = document.createElement("span");
+      s.textContent = String(v);
+      meta.appendChild(s);
+    } else rest.push([k, v]);
+  }
+  if (meta.childNodes.length) holder.appendChild(meta);
+  if (primary) {
+    const s = document.createElement("p");
+    s.className = "sentence";
+    s.lang = "ace";
+    s.textContent = item[primary];
+    holder.appendChild(s);
+  }
+  for (const [k, v] of rest) {
     const p = document.createElement("p");
+    p.className = "field";
     const b = document.createElement("b");
-    b.textContent = k + ": ";
-    p.appendChild(b);
-    p.appendChild(document.createTextNode(String(v)));
+    b.textContent = STRINGS.en["field." + k] ? t("field." + k) : k.replaceAll("_", " ");
+    p.append(b, document.createTextNode(String(v)));
     holder.appendChild(p);
   }
   $("correction").value = "";

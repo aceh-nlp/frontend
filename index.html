@@ -5,72 +5,99 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aceh NLP</title>
 <meta name="description" content="A community-led, local-first project using language models to help preserve Acehnese, polished by its speakers.">
+<meta name="theme-color" content="#0b4a52">
+<link rel="icon" type="image/svg+xml" href="/icon.svg">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body class="landing">
-<header class="topbar">
-  <a class="brand" href="/" data-i18n="site.title">Aceh NLP</a>
-  <nav>
-    <a href="/app/#review" data-i18n="nav.review">Review sentences</a>
-    <a href="/app/#try" data-i18n="nav.try">Try the model</a>
-    <span id="lang-switch" class="lang-switch" role="group" aria-label="Language"></span>
-  </nav>
-</header>
-<p id="draft-notice" class="notice muted" hidden data-i18n="draft.notice"></p>
-
-<main>
-  <section class="hero">
+<div class="hero">
+  <header class="topbar wrap">
+    <a class="brand" href="/"><img src="/icon.svg" alt="" width="30" height="30"><span data-i18n="site.title">Aceh NLP</span></a>
+    <nav>
+      <a href="/app/#review" data-i18n="nav.review">Review sentences</a>
+      <a href="/app/#try" data-i18n="nav.try">Try the model</a>
+      <span id="lang-switch" class="lang-switch" role="group" aria-label="Language"></span>
+    </nav>
+  </header>
+  <p id="draft-notice" class="notice wrap-notice" hidden data-i18n="draft.notice"></p>
+  <div class="hero-body wrap">
     <h1 data-i18n="hero.title">Keeping Acehnese alive, together</h1>
     <p class="lead" data-i18n="hero.lead"></p>
     <p class="cta-row">
-      <a class="button" href="/app/#review" data-i18n="nav.review">Review sentences</a>
-      <a class="button secondary" href="/app/#try" data-i18n="nav.try">Try the model</a>
+      <a class="button coral" href="/app/#review" data-i18n="nav.review">Review sentences</a>
+      <a class="button ghost" href="/app/#try" data-i18n="nav.try">Try the model</a>
     </p>
+  </div>
+  <svg class="shore" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
+    <path class="wave-back" d="M0 92 C 240 42 420 132 720 92 S 1200 42 1440 92 V136 H0 Z"/>
+    <path class="wave-front" d="M0 118 C 300 74 520 150 820 112 S 1240 84 1440 120 V170 H0 Z"/>
+  </svg>
+</div>
+
+<main>
+  <section class="stats wrap" aria-label="Project in numbers">
+    <div><b data-i18n="stat.speakers.n">3.4 million</b><span data-i18n="stat.speakers"></span></div>
+    <div><b>162</b><span data-i18n="stat.drafts"></span></div>
+    <div><b>6</b><span data-i18n="stat.team"></span></div>
   </section>
 
-  <section id="why">
+  <section id="why" class="wrap narrow">
     <h2 data-i18n="why.title">Why this matters</h2>
     <p data-i18n="why.p1"></p>
     <p data-i18n="why.p2"></p>
   </section>
 
-  <section id="how">
+  <section id="demo" class="wrap narrow">
+    <h2 data-i18n="demo.title">What a review looks like</h2>
+    <article class="demo-card">
+      <p class="eyebrow" data-i18n="demo.label">AI draft, not yet checked</p>
+      <p class="sentence">Lôn beudôh poh limong beungoh.</p>
+      <p class="muted" data-i18n="demo.translation"></p>
+      <p class="demo-question" data-i18n="demo.question"></p>
+      <p class="demo-votes">
+        <a class="button vote" href="/app/#review">+1</a>
+        <a class="button vote" href="/app/#review">−1</a>
+      </p>
+    </article>
+  </section>
+
+  <section id="how" class="wrap">
     <h2 data-i18n="how.title">How it works</h2>
     <ol class="layers">
-      <li><b data-i18n="how.l1.title"></b><span data-i18n="how.l1.text"></span></li>
-      <li><b data-i18n="how.l2.title"></b><span data-i18n="how.l2.text"></span></li>
-      <li><b data-i18n="how.l3.title"></b><span data-i18n="how.l3.text"></span></li>
+      <li><span class="bar" style="--w:34%"></span><div><b data-i18n="how.l1.title"></b><p data-i18n="how.l1.text"></p></div></li>
+      <li><span class="bar" style="--w:64%"></span><div><b data-i18n="how.l2.title"></b><p data-i18n="how.l2.text"></p></div></li>
+      <li><span class="bar" style="--w:100%"></span><div><b data-i18n="how.l3.title"></b><p data-i18n="how.l3.text"></p></div></li>
     </ol>
     <p class="muted" data-i18n="how.note"></p>
   </section>
 
-  <section id="people">
+  <section id="people" class="wrap">
     <h2 data-i18n="people.title">People behind it</h2>
-    <p data-i18n="people.intro"></p>
+    <p class="narrow-text" data-i18n="people.intro"></p>
     <ul class="people">
-      <li>catslovefish.eth</li>
-      <li>ren</li>
-      <li>ethan</li>
-      <li>yanna</li>
-      <li>hunif</li>
-      <li>tisa</li>
+      <li><span class="avatar" aria-hidden="true">C</span>catslovefish.eth</li>
+      <li><span class="avatar" aria-hidden="true">R</span>ren</li>
+      <li><span class="avatar" aria-hidden="true">E</span>ethan</li>
+      <li><span class="avatar" aria-hidden="true">Y</span>yanna</li>
+      <li><span class="avatar" aria-hidden="true">H</span>hunif</li>
+      <li><span class="avatar" aria-hidden="true">T</span>tisa</li>
     </ul>
-    <p class="tags">
-      <span>US</span><span>Malaysia</span><span>China</span><span>Aceh</span><span>Indonesia</span>
-    </p>
+    <p class="tags"><span>US</span><span>Malaysia</span><span>China</span><span>Aceh</span><span>Indonesia</span></p>
   </section>
 
-  <section id="join">
-    <h2 data-i18n="join.title">Join the project</h2>
-    <p data-i18n="join.p"></p>
-    <p class="cta-row"><a class="button" href="/app/#review" data-i18n="join.cta">Start reviewing</a></p>
-    <p class="muted" data-i18n="join.contact"></p>
+  <section id="join" class="join">
+    <div class="wrap narrow">
+      <h2 data-i18n="join.title">Join the project</h2>
+      <p data-i18n="join.p"></p>
+      <p class="cta-row"><a class="button coral" href="/app/#review" data-i18n="join.cta">Start reviewing</a></p>
+      <p class="join-contact" data-i18n="join.contact"></p>
+    </div>
   </section>
 </main>
 
-<footer class="muted">
-  <a href="https://github.com/aceh-nlp/dataset" data-i18n="footer.data">Data in aceh-nlp/dataset</a> ·
-  <a href="https://github.com/aceh-nlp/backend" data-i18n="footer.api">API in aceh-nlp/backend</a>
+<footer class="site-footer wrap">
+  <a href="https://github.com/aceh-nlp/dataset" data-i18n="footer.data">Data</a>
+  <a href="https://github.com/aceh-nlp/backend" data-i18n="footer.api">API</a>
 </footer>
 <script src="/strings.js"></script>
 </body>

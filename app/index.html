@@ -5,25 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Aceh NLP</title>
+<meta name="theme-color" content="#0b4a52">
+<link rel="icon" type="image/svg+xml" href="/icon.svg">
 <link rel="stylesheet" href="/style.css">
 </head>
-<body>
-<header class="topbar">
-  <a class="brand" href="/" data-i18n="site.title">Aceh NLP</a>
+<body class="tool">
+<header class="topbar wrap">
+  <a class="brand" href="/"><img src="/icon.svg" alt="" width="30" height="30"><span data-i18n="site.title">Aceh NLP</span></a>
   <nav>
     <a href="/" data-i18n="nav.home">About the project</a>
     <span id="lang-switch" class="lang-switch" role="group" aria-label="Language"></span>
   </nav>
 </header>
-<p id="draft-notice" class="notice muted" hidden data-i18n="draft.notice"></p>
-<div id="whoami" class="muted"></div>
+<p id="draft-notice" class="notice wrap-notice" hidden data-i18n="draft.notice"></p>
+<div id="whoami" class="muted wrap"></div>
 
-<div class="tabs" role="tablist">
+<div class="wrap"><div class="tabs" role="tablist">
   <button role="tab" data-tab="review" data-i18n="tab.review">Review</button>
   <button role="tab" data-tab="try" data-i18n="tab.try">Try the model</button>
-</div>
+</div></div>
 
-<main>
+<main class="wrap">
   <!-- ===== Review tab ===== -->
   <div id="tab-review" hidden>
     <section id="view-login" hidden>
@@ -66,7 +68,8 @@
         <h3 data-i18n="export.title">Download reviews</h3>
         <form id="export-form">
           <label><span data-i18n="export.dataset">Dataset</span>
-            <input type="text" id="export-dataset" required></label>
+            <input type="text" id="export-dataset" list="dataset-names" required></label>
+          <datalist id="dataset-names"></datalist>
           <label><span data-i18n="export.token">Admin token</span>
             <input type="password" id="export-token" required></label>
           <button type="submit" data-i18n="export.submit">Download JSON</button>
@@ -77,19 +80,20 @@
     <section id="view-review" hidden>
       <button id="back" class="linklike" data-i18n="review.back">← datasets</button>
       <div id="progress" class="muted"></div>
+      <div class="progress"><span id="progress-bar"></span></div>
       <article id="card">
         <div id="card-fields"></div>
         <div id="specialist-controls" hidden>
+          <label><span data-i18n="review.correction">Correction</span>
+            <textarea id="correction" rows="2"></textarea></label>
+          <label><span data-i18n="review.annotation">Annotation</span>
+            <textarea id="annotation" rows="2"></textarea></label>
           <div class="rate-row" id="score-buttons">
             <button data-score="1">1</button><button data-score="2">2</button>
             <button data-score="3">3</button><button data-score="4">4</button>
             <button data-score="5">5</button>
           </div>
           <p class="muted" data-i18n="review.score.hint"></p>
-          <label><span data-i18n="review.correction">Correction</span>
-            <textarea id="correction" rows="2"></textarea></label>
-          <label><span data-i18n="review.annotation">Annotation</span>
-            <textarea id="annotation" rows="2"></textarea></label>
         </div>
         <div id="everyday-controls" hidden>
           <div class="rate-row" id="vote-buttons">
@@ -120,8 +124,8 @@
   </div>
 </main>
 
-<footer class="muted">
-  <a href="https://github.com/aceh-nlp/dataset" data-i18n="footer.data">Data in aceh-nlp/dataset</a> ·
+<footer class="site-footer wrap">
+  <a href="https://github.com/aceh-nlp/dataset" data-i18n="footer.data">Data in aceh-nlp/dataset</a>
   <a href="https://github.com/aceh-nlp/backend" data-i18n="footer.api">API in aceh-nlp/backend</a>
 </footer>
 <script src="/strings.js"></script>

@@ -390,3 +390,47 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - EN: The model is offline right now. The demo runs on a rented GPU and is switched on for evaluation sessions.
 - ACE draft: Model jinoe hana udep. Demo nyoe jipeujalan bak GPU sewa ngon geupeuudep watèe sesi evaluasi.
 - Koreksi:
+
+## Added with the Island design
+
+**stat.speakers**
+- ID: orang berbahasa Aceh
+- EN: people speak Acehnese
+- ACE draft: ureueng meututoe basa Aceh
+- Koreksi:
+
+**stat.drafts**
+- ID: kalimat buatan AI menunggu penutur
+- EN: AI-drafted sentences waiting for speakers
+- ACE draft: kalimat buatan AI preh ureueng Aceh
+- Koreksi:
+
+**stat.team**
+- ID: orang di Pulau Weh
+- EN: of us on Pulau Weh
+- ACE draft: droe di Pulo Weh
+- Koreksi:
+
+**demo.title**
+- ID: Seperti apa tinjauan itu
+- EN: What a review looks like
+- ACE draft: Kiban rupa pareksa
+- Koreksi:
+
+**demo.label**
+- ID: Draf AI, belum diperiksa
+- EN: AI draft, not yet checked
+- ACE draft: Draf AI, gohlom geupareksa
+- Koreksi:
+
+**demo.question**
+- ID: Apakah ini terdengar wajar bagi Anda?
+- EN: Does this sound right to you?
+- ACE draft: Peue nyoe deuh wajar bak droeneuh?
+- Koreksi:
+
+**datasets.layer**
+- ID: Lapisan
+- EN: Layer
+- ACE draft: Lapisan
+- Koreksi:
