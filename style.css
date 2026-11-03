@@ -77,11 +77,6 @@ button:disabled { opacity: .5; cursor: default; filter: none; }
 }
 .wrap-notice { max-width: 1000px; margin: 4px auto 0; width: calc(100% - 40px); }
 
-/* numbers */
-.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 300px)); gap: 24px; padding-block: 28px 12px; }
-.stats b { display: block; font: 600 clamp(1.7rem, 4.5vw, 2.6rem)/1.1 var(--serif); color: var(--accent); }
-.stats span { display: block; color: var(--muted); font-size: .95rem; margin-top: 4px; }
-
 /* sample review */
 .demo-card, #card {
   background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: clamp(20px, 4vw, 32px);
@@ -215,8 +210,5 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; font: 1rem/1.6 var(--sans)
 
 /* phones */
 @media (max-width: 620px) {
-  .stats { grid-template-columns: 1fr; gap: 14px; }
-  .stats > div { display: grid; grid-template-columns: 9.6em 1fr; gap: 10px; align-items: baseline; }
-  .stats span { margin: 0; }
   .cta-row .button { flex: 1 1 150px; }
 }

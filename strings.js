@@ -5,9 +5,6 @@
 
 const STRINGS = {
   en: {
-    "stat.speakers.n": "3.4 million",
-    "stat.speakers": "people speak Acehnese",
-    "stat.team": "of us on Pulau Weh",
     "datasets.layer": "Layer",
     "field.ind": "Indonesian",
     "field.eng": "English",
@@ -21,9 +18,6 @@ const STRINGS = {
     "hero.title": "A language lives where it is spoken.",
     "hero.lead": "Acehnese is carried in kitchens, on fishing boats and over coffee, far from the data that trained today’s models, which learned about Aceh from other people’s choices and inherited their blind spots. We are a small group from different backgrounds, gathered on Pulau Weh by curiosity and care for the language, helping speakers collect their own words and decide what counts as data, who checks it, and what it is for. This is how we begin to decolonise the technology: a language model held by a community becomes a living archive, one you can question, correct and teach, so knowledge keeps moving, as it always has, from one voice to the next.",
 
-    "why.title": "Why this matters",
-    "why.p1": "About 3.4 million people speak Acehnese, yet almost no open, transcribed speech exists for it. Existing models were trained mostly on Bible text and stumble on everyday conversation.",
-    "why.p2": "In our own tests, models produced Acehnese that native speakers could recognise but would still correct. That polish has to come from the community itself, so the project starts with people, and the models become a tool the community shapes and uses.",
 
     "how.title": "How it works",
     "loop.view.label": "View",
@@ -123,9 +117,6 @@ const STRINGS = {
   },
 
   id: {
-    "stat.speakers.n": "3,4 juta",
-    "stat.speakers": "orang berbahasa Aceh",
-    "stat.team": "orang di Pulau Weh",
     "datasets.layer": "Lapisan",
     "field.ind": "Bahasa Indonesia",
     "field.eng": "Bahasa Inggris",
@@ -139,9 +130,6 @@ const STRINGS = {
     "hero.title": "Bahasa hidup di tempat ia dituturkan.",
     "hero.lead": "Bahasa Aceh dibawa di dapur, di atas perahu nelayan, dan di meja kopi, jauh dari data yang melatih model-model hari ini, yang mengenal Aceh dari pilihan orang lain dan mewarisi titik butanya. Kami sekelompok kecil orang dengan latar belakang berbeda, dipertemukan di Pulau Weh oleh rasa ingin tahu dan kepedulian pada bahasa ini, membantu para penutur mengumpulkan kata-kata mereka sendiri dan menentukan apa yang dihitung sebagai data, siapa yang memeriksanya, dan untuk apa. Beginilah kami mulai mendekolonisasi teknologi ini: model bahasa di tangan komunitas menjadi arsip hidup, yang bisa ditanya, dikoreksi, dan diajari, sehingga pengetahuan terus bergerak, seperti selama ini, dari satu suara ke suara berikutnya.",
 
-    "why.title": "Mengapa ini penting",
-    "why.p1": "Sekitar 3,4 juta orang berbahasa Aceh, tetapi hampir tidak ada rekaman tutur yang ditranskripsi dan terbuka. Model yang ada kebanyakan dilatih dari teks Alkitab dan tersandung pada percakapan sehari-hari.",
-    "why.p2": "Dalam pengujian kami, model menghasilkan bahasa Aceh yang dikenali penutur asli tetapi masih perlu dikoreksi. Penyempurnaan itu harus datang dari komunitas sendiri, sehingga proyek ini dimulai dari manusia, dan model menjadi alat yang dibentuk dan dipakai komunitas.",
 
     "how.title": "Cara kerjanya",
     "loop.view.label": "Tampilan",
@@ -243,8 +231,6 @@ const STRINGS = {
   // Acehnese: AI DRAFT (Claude, Nov 2026) awaiting native-speaker correction.
   // Source sheet: aceh_nlp/docs/site_strings_ace_draft.md. Replace lines as corrections arrive.
   ace: {
-    "stat.speakers": "ureueng meututoe basa Aceh",
-    "stat.team": "droe di Pulo Weh",
     "datasets.layer": "Lapisan",
     "site.title": "Aceh NLP",
     "nav.review": "Pareksa kalimat",
@@ -253,9 +239,6 @@ const STRINGS = {
     "lang.label": "Basa",
     "hero.title": "Basa udep di teumpat geumarit.",
     "hero.lead": "Basa Aceh geuba lam dapu, ateuh peurahô nelayan, ngon bak meja kupi, jioh nibak data nyang geulatéh model-model jinoe, nyang geuteupeue Aceh dari piléh ureueng laén ngon jipeusaka titèk buta jih. Kamoe saboh kawan ubit nyang meubeda-beda latar, nyang meurumpok di Pulo Weh kareuna hawa keuneuk teupeue ngon peuduli keu basa nyoe, meubantu ureueng nyang meututoe geukumpoi narit droe ngon geupeutentèe peue nyang jeuet keu data, soe nyang pareksa, ngon keu peue. Meunoe kamoe mulai dekolonisasi teknologi nyoe: model basa bak jaroe masyarakat jeuet keu arsip udep, jeuet tatanyong, tapeubeutôi, ngon tapeurunoe, mangat teupeue teutap jijak, lagèe nyang ka sabé, dari saboh su u su laén.",
-    "why.title": "Pakon nyoe peunteng",
-    "why.p1": "Na kira-kira 3,4 juta ureueng nyang meututoe basa Aceh, teuma hampir hana rekaman tutoe nyang ka geutranskripsi ngon teubuka. Model nyang na jinoe le nyang geulatéh dari teks Alkitab ngon payah watèe marit uroe-uroe.",
-    "why.p2": "Lam ujian kamoe, model peuhasé basa Aceh nyang geuteupeue lé ureueng Aceh teuma mantong peureulèe geupeubeutôi. Peugöt nyan harôh teuka dari masyarakat keudroe, kareuna nyan proyek nyoe geumulai dari ureueng, dan model jeuet keu alat nyang geupeugöt ngon geupeuguna lé masyarakat.",
     "how.title": "Kiban cara keureuja jih",
     "loop.view.label": "Rupa",
     "loop.view.story": "Kitab resep",

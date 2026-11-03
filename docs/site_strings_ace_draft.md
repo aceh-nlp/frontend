@@ -59,23 +59,7 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - ACE draft: Basa Aceh geuba lam dapu, ateuh peurahô nelayan, ngon bak meja kupi, jioh nibak data nyang geulatéh model-model jinoe, nyang geuteupeue Aceh dari piléh ureueng laén ngon jipeusaka titèk buta jih. Kamoe saboh kawan ubit nyang meubeda-beda latar, nyang meurumpok di Pulo Weh kareuna hawa keuneuk teupeue ngon peuduli keu basa nyoe, meubantu ureueng nyang meututoe geukumpoi narit droe ngon geupeutentèe peue nyang jeuet keu data, soe nyang pareksa, ngon keu peue. Meunoe kamoe mulai dekolonisasi teknologi nyoe: model basa bak jaroe masyarakat jeuet keu arsip udep, jeuet tatanyong, tapeubeutôi, ngon tapeurunoe, mangat teupeue teutap jijak, lagèe nyang ka sabé, dari saboh su u su laén.
 - Koreksi:
 
-**why.title**
-- ID: Mengapa ini penting
-- EN: Why this matters
-- ACE draft: Pakon nyoe peunteng
-- Koreksi:
 
-**why.p1**
-- ID: Sekitar 3,4 juta orang berbahasa Aceh, tetapi hampir tidak ada rekaman tutur yang ditranskripsi dan terbuka. Model yang ada kebanyakan dilatih dari teks Alkitab dan tersandung pada percakapan sehari-hari.
-- EN: About 3.4 million people speak Acehnese, yet almost no open, transcribed speech exists for it. Existing models were trained mostly on Bible text and stumble on everyday conversation.
-- ACE draft: Na kira-kira 3,4 juta ureueng nyang meututoe basa Aceh, teuma hampir hana rekaman tutoe nyang ka geutranskripsi ngon teubuka. Model nyang na jinoe le nyang geulatéh dari teks Alkitab ngon payah watèe marit uroe-uroe.
-- Koreksi:
-
-**why.p2**
-- ID: Dalam pengujian kami, model menghasilkan bahasa Aceh yang dikenali penutur asli tetapi masih perlu dikoreksi. Penyempurnaan itu harus datang dari komunitas sendiri, sehingga proyek ini dimulai dari manusia, dan model menjadi alat yang dibentuk dan dipakai komunitas.
-- EN: In our own tests, models produced Acehnese that native speakers could recognise but would still correct. That polish has to come from the community itself, so the project starts with people, and the models become a tool the community shapes and uses.
-- ACE draft: Lam ujian kamoe, model peuhasé basa Aceh nyang geuteupeue lé ureueng Aceh teuma mantong peureulèe geupeubeutôi. Peugöt nyan harôh teuka dari masyarakat keudroe, kareuna nyan proyek nyoe geumulai dari ureueng, dan model jeuet keu alat nyang geupeugöt ngon geupeuguna lé masyarakat.
-- Koreksi:
 
 **how.title**
 - ID: Cara kerjanya
@@ -357,17 +341,6 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 
 ## Added with the Island design
 
-**stat.speakers**
-- ID: orang berbahasa Aceh
-- EN: people speak Acehnese
-- ACE draft: ureueng meututoe basa Aceh
-- Koreksi:
-
-**stat.team**
-- ID: orang di Pulau Weh
-- EN: of us on Pulau Weh
-- ACE draft: droe di Pulo Weh
-- Koreksi:
 
 
 **datasets.layer**
