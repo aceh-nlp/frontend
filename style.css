@@ -48,8 +48,8 @@ button:disabled { opacity: .5; cursor: default; filter: none; }
 .topbar { display: flex; justify-content: space-between; align-items: center; gap: 10px 16px; flex-wrap: wrap; padding-block: 16px; }
 .topbar nav { display: flex; align-items: center; gap: 8px 18px; flex-wrap: wrap; }
 .topbar nav a { text-decoration: none; font-weight: 500; }
-.brand { display: inline-flex; align-items: center; gap: 11px; font: 700 1.3rem var(--serif); text-decoration: none; color: inherit; }
-.brand img { display: block; border-radius: 10px; }
+.brand { display: inline-flex; align-items: center; gap: 14px; font: 700 1.5rem var(--serif); text-decoration: none; color: inherit; }
+.brand img { display: block; border-radius: 19px; }
 .lang-switch { display: inline-flex; border: 1px solid var(--border); border-radius: 9px; overflow: hidden; }
 .lang-switch button {
   min-height: 34px; padding: 4px 11px; border: 0; border-radius: 0; font-size: .85rem; font-weight: 500;
