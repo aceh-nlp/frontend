@@ -39,7 +39,7 @@ No build step.
   for `/api/*`, which forwards to the backend on the server (`API_ORIGIN`),
   so pages keep calling same-origin `/api`.
 - `_headers` carries the security headers and `noindex` for `/app/*`;
-  `_redirects` sends `www` to the apex. `.assetsignore` keeps code and docs
-  out of the published files.
+  `worker.js` also sends `www` to the apex. `.assetsignore` keeps code, docs
+  and `.git` out of the published files.
 
 Local check: `npx wrangler dev`
