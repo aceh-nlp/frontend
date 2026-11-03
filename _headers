@@ -4,5 +4,8 @@
   Referrer-Policy: no-referrer
   Cache-Control: no-cache
 
-/app/*
+/evaluate/*
+  X-Robots-Tag: noindex, nofollow
+
+/talk/*
   X-Robots-Tag: noindex, nofollow

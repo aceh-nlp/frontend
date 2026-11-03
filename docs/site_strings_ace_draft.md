@@ -24,15 +24,15 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **nav.review**
-- ID: Tinjau kalimat
-- EN: Review sentences
-- ACE draft: Pareksa kalimat
+- ID: Evaluasi
+- EN: Evaluation
+- ACE draft: Evaluasi
 - Koreksi:
 
 **nav.try**
-- ID: Coba modelnya
-- EN: Try the model
-- ACE draft: Cuba model nyoe
+- ID: Bicara dengan model
+- EN: Talk with the model
+- ACE draft: Marit ngon model
 - Koreksi:
 
 **nav.home**
@@ -98,9 +98,9 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **join.cta**
-- ID: Mulai meninjau
-- EN: Start reviewing
-- ACE draft: Mulai pareksa
+- ID: Mulai mengevaluasi
+- EN: Start evaluating
+- ACE draft: Mulai evaluasi
 - Koreksi:
 
 **join.teach.title**
@@ -224,18 +224,6 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 ## Tool page
-
-**tab.review**
-- ID: Tinjau
-- EN: Review
-- ACE draft: Pareksa
-- Koreksi:
-
-**tab.try**
-- ID: Coba modelnya
-- EN: Try the model
-- ACE draft: Cuba model nyoe
-- Koreksi:
 
 **login.title**
 - ID: Masuk
@@ -439,9 +427,9 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **try.title**
-- ID: Coba modelnya
-- EN: Try the model
-- ACE draft: Cuba model nyoe
+- ID: Bicara dengan model
+- EN: Talk with the model
+- ACE draft: Marit ngon model
 - Koreksi:
 
 **try.note**
@@ -457,9 +445,9 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **try.submit**
-- ID: Hasilkan
-- EN: Generate
-- ACE draft: Peuhasé
+- ID: Kirim
+- EN: Send
+- ACE draft: Peugisa
 - Koreksi:
 
 **try.offline**

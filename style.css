@@ -179,12 +179,6 @@ button:disabled { opacity: .5; cursor: default; filter: none; }
 .tool .topbar nav a { color: var(--accent); }
 .tool .wrap-notice { max-width: 720px; margin-top: 12px; }
 #whoami { margin-top: 10px; min-height: 1.2em; }
-.tabs { display: flex; gap: 6px; margin-top: 8px; border-bottom: 1px solid var(--border); }
-.tabs [role=tab] {
-  min-height: 44px; border: 0; border-bottom: 3px solid transparent; border-radius: 0;
-  background: transparent; color: var(--muted); padding: 8px 14px;
-}
-.tabs [role=tab][aria-selected="true"] { color: var(--fg); border-bottom-color: var(--coral); }
 .tool section { padding-block: 22px 8px; }
 .tool h2 { font-size: 1.55rem; }
 label { display: block; margin: 14px 0; font-weight: 500; }

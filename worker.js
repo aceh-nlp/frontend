@@ -1,5 +1,5 @@
 /* Cloudflare Worker: static site plus a same-origin /api proxy to the backend
-   on the server, so app.js keeps calling /api and nothing else changes. */
+   on the server, so the pages keep calling /api and nothing else changes. */
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);

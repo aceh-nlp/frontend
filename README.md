@@ -1,7 +1,7 @@
 # aceh-nlp/frontend
 
 **Interface only.** Static files — `index.html` (public landing page),
-`app/index.html` + `app.js` (the tool), `strings.js` (all text in Acehnese,
+`evaluate/index.html` + `evaluate.js`, `talk/index.html` + `talk.js`, `common.js`, `strings.js` (all text in Acehnese,
 Indonesian and English), `style.css` — no build step, no server code, no
 stored data. Everything goes through the
 same-origin `/api/*` of
@@ -12,9 +12,9 @@ behind "Try the model" in [aceh-nlp/gpu](https://github.com/aceh-nlp/gpu).
 What it does:
 - **Landing page** (`/`): why the project exists, how the three data layers
   work, the people behind it, how to join. Public and indexable.
-- **Tool page** (`/app/`): two tabs. *Review* needs sign-in; *Try the model*
-  is open to anyone (the backend rate-limits it) and shows an offline notice
-  when no GPU server is configured.
+- **Evaluation** (`/evaluate/`): sign-in, review and upload.
+- **Talk with the model** (`/talk/`): open to anyone (the backend rate-limits it);
+  shows an offline notice when no GPU server is configured.
 - **Languages**: a switch for Acehnese / Indonesian / English, remembered in
   the browser. The Acehnese strings in `strings.js` are an AI draft awaiting
   native-speaker correction (source sheet:
@@ -36,7 +36,8 @@ No build step.
 - `wrangler.toml` serves the repo as static assets and runs `worker.js` first
   for `/api/*`, which forwards to the backend on the server (`API_ORIGIN`),
   so pages keep calling same-origin `/api`.
-- `_headers` carries the security headers and `noindex` for `/app/*`;
+- `_headers` carries the security headers and `noindex` for `/evaluate/*` and
+  `/talk/*`; `_redirects` sends old `/app/` links to `/evaluate/`;
   `worker.js` also sends `www` to the apex. `.assetsignore` keeps code, docs
   and `.git` out of the published files.
 

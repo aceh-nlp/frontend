@@ -10,8 +10,8 @@ const STRINGS = {
     "field.eng": "English",
     "field.eng_summary": "English summary",
     "site.title": "Aceh NLP",
-    "nav.review": "Review sentences",
-    "nav.try": "Try the model",
+    "nav.review": "Evaluation",
+    "nav.try": "Talk with the model",
     "nav.home": "About the project",
     "lang.label": "Language",
 
@@ -66,7 +66,7 @@ const STRINGS = {
 
     "join.title": "Join the project",
     "join.p": "It takes many kinds of help, not only reviewers. All roles are volunteer for now.",
-    "join.cta": "Start reviewing",
+    "join.cta": "Start evaluating",
     "join.teach.title": "Teach or study Acehnese",
     "join.teach.text": "Review sentences and settle spelling.",
     "join.speak.title": "Speak Acehnese",
@@ -89,8 +89,6 @@ const STRINGS = {
     "join.contact": "Posts there are public, so please leave out personal details. An email address is coming soon.",
 
 
-    "tab.review": "Review",
-    "tab.try": "Try the model",
 
     "login.title": "Sign in",
     "login.note": "Your reviews are recorded under your email and dialect so we know who evaluated what. We email you a one-time code; there is no password.",
@@ -128,10 +126,10 @@ const STRINGS = {
     "review.done.title": "All done 🎉",
     "review.done.text": "You have reviewed every item in this dataset. Thank you!",
 
-    "try.title": "Try the model",
+    "try.title": "Talk with the model",
     "try.note": "Write something in Acehnese and see what the model answers. It is a research model and often wrong — that is the point. Nothing you type here is stored.",
     "try.placeholder": "Tuléh lam basa Aceh…",
-    "try.submit": "Generate",
+    "try.submit": "Send",
     "try.offline": "The model is offline right now. The demo runs on a rented GPU and is switched on for evaluation sessions.",
     "try.wait": "…",
     "draft.notice": "This Acehnese text is an AI draft awaiting correction by native speakers. If something is wrong, please help us fix it.",
@@ -143,8 +141,8 @@ const STRINGS = {
     "field.eng": "Bahasa Inggris",
     "field.eng_summary": "Ringkasan bahasa Inggris",
     "site.title": "Aceh NLP",
-    "nav.review": "Tinjau kalimat",
-    "nav.try": "Coba modelnya",
+    "nav.review": "Evaluasi",
+    "nav.try": "Bicara dengan model",
     "nav.home": "Tentang proyek",
     "lang.label": "Bahasa",
 
@@ -199,7 +197,7 @@ const STRINGS = {
 
     "join.title": "Bergabung dengan proyek",
     "join.p": "Proyek ini butuh banyak jenis bantuan, bukan hanya peninjau. Untuk saat ini semua peran bersifat sukarela.",
-    "join.cta": "Mulai meninjau",
+    "join.cta": "Mulai mengevaluasi",
     "join.teach.title": "Mengajar atau mempelajari bahasa Aceh",
     "join.teach.text": "Meninjau kalimat dan memutuskan soal ejaan.",
     "join.speak.title": "Berbicara bahasa Aceh",
@@ -222,8 +220,6 @@ const STRINGS = {
     "join.contact": "Tulisan di sana bersifat publik, jadi jangan sertakan data pribadi. Alamat email akan segera tersedia.",
 
 
-    "tab.review": "Tinjau",
-    "tab.try": "Coba modelnya",
 
     "login.title": "Masuk",
     "login.note": "Tinjauan Anda dicatat dengan email dan dialek Anda agar kami tahu siapa menilai apa. Kami mengirim kode sekali pakai ke email Anda; tidak ada kata sandi.",
@@ -261,10 +257,10 @@ const STRINGS = {
     "review.done.title": "Selesai 🎉",
     "review.done.text": "Anda telah meninjau semua butir dalam dataset ini. Terima kasih!",
 
-    "try.title": "Coba modelnya",
+    "try.title": "Bicara dengan model",
     "try.note": "Tulis sesuatu dalam bahasa Aceh dan lihat jawaban model. Ini model riset dan sering salah — justru itu intinya. Teks yang Anda ketik tidak disimpan.",
     "try.placeholder": "Tuléh lam basa Aceh…",
-    "try.submit": "Hasilkan",
+    "try.submit": "Kirim",
     "try.offline": "Model sedang tidak aktif. Demo ini berjalan di GPU sewaan dan dinyalakan saat sesi evaluasi.",
     "try.wait": "…",
     "draft.notice": "Teks bahasa Aceh ini masih draf buatan AI yang menunggu koreksi penutur asli. Jika ada yang salah, bantu kami memperbaikinya.",
@@ -275,8 +271,8 @@ const STRINGS = {
   ace: {
     "datasets.layer": "Lapisan",
     "site.title": "Aceh NLP",
-    "nav.review": "Pareksa kalimat",
-    "nav.try": "Cuba model nyoe",
+    "nav.review": "Evaluasi",
+    "nav.try": "Marit ngon model",
     "nav.home": "Hai proyek nyoe",
     "lang.label": "Basa",
     "hero.title": "Basa udep di teumpat geumarit.",
@@ -326,7 +322,7 @@ const STRINGS = {
     "people.intro": "Kamoe nam droe, tinggai ngon meucuba-cuba meusajan di Pulo Weh — meunan proyek nyoe geumulai. Kamoe teuka dari teumpat ngon latar nyang meubeda-beda:",
     "join.title": "Tamong lam proyek nyoe",
     "join.p": "Proyek nyoe peureulèe macam-macam bantuan, kon ureueng pareksa mantong. Keu jinoe mandum peran nyan suka rela.",
-    "join.cta": "Mulai pareksa",
+    "join.cta": "Mulai evaluasi",
     "join.teach.title": "Neumeuajar atawa neubeuet basa Aceh",
     "join.teach.text": "Neupareksa kalimat ngon neupeutentèe ejaan.",
     "join.speak.title": "Neumarit basa Aceh",
@@ -347,8 +343,6 @@ const STRINGS = {
     "join.story.text": "Neubantu ureueng meuphôm proyek nyoe deungon jujô.",
     "join.contact.link": "Neutuléh keu kamoe bak GitHub",
     "join.contact": "Tulisan nyan jeuet geubaca lé ban mandum ureueng, nyan pasai bèk neupeutamong data droe. Alamat email hana trép teuk na.",
-    "tab.review": "Pareksa",
-    "tab.try": "Cuba model nyoe",
     "login.title": "Tamong",
     "login.note": "Hasé pareksa droeneuh geucatat ngon email ngon dialék droeneuh mangat kamoe meuteupeue soe nyang nilai peue. Kamoe peugisa kode sigo pakai u email droeneuh; hana kata sandi.",
     "login.email": "Email",
@@ -382,10 +376,10 @@ const STRINGS = {
     "review.annotation": "Catatan",
     "review.done.title": "Ka lheueh 🎉",
     "review.done.text": "Droeneuh ka neupareksa bandum butir lam dataset nyoe. Teurimong geunaséh!",
-    "try.title": "Cuba model nyoe",
+    "try.title": "Marit ngon model",
     "try.note": "Neutuléh peue-peue lam basa Aceh dan neukalon kiban model jaweueb. Nyoe model risèt ngon kayém salah — nyan keuh inti jih. Teks nyang neutuléh hana geusimpan.",
     "try.placeholder": "Tuléh lam basa Aceh…",
-    "try.submit": "Peuhasé",
+    "try.submit": "Peugisa",
     "try.offline": "Model jinoe hana udep. Demo nyoe jipeujalan bak GPU sewa ngon geupeuudep watèe sesi evaluasi.",
     "try.wait": "…",
     "draft.notice": "Teks basa Aceh nyoe mantong draf buatan AI, gohlom geupeubeutôi lé ureueng Aceh. Meunyo salah, neubantu kamoe peubeutôi.",

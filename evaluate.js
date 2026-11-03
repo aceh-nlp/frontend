@@ -1,9 +1,6 @@
-/* Aceh NLP tool page — interface only; all state lives behind /api (same origin).
-   Two tabs: Review (sign-in) and Try the model (open to anyone). */
+/* Aceh NLP evaluation page: email code sign-in, then review. */
 "use strict";
 
-const $ = (id) => document.getElementById(id);
-let token = localStorage.getItem("aceh_token") || "";
 let profile = null;
 let current = { dataset: null, queue: [], item: null };
 let lastProgress = null;
@@ -23,22 +20,6 @@ function datasetLabel(name) {
   };
 }
 
-async function api(path, { method = "GET", body } = {}) {
-  const resp = await fetch("/api" + path, {
-    method,
-    headers: {
-      "Content-Type": "application/json",
-      ...(token ? { Authorization: "Bearer " + token } : {}),
-    },
-    body: body !== undefined ? JSON.stringify(body) : undefined,
-  });
-  const data = await resp.json().catch(() => ({ error: "Bad response" }));
-  // A refused token is over: back to the sign-in form.
-  if (resp.status === 401 && token && !path.startsWith("/login")) { localStorage.removeItem("aceh_token"); location.reload(); }
-  if (!resp.ok) throw Object.assign(new Error(data.error || resp.statusText), { status: resp.status });
-  return data;
-}
-
 function show(view) {
   for (const v of ["login", "datasets", "review"]) $("view-" + v).hidden = v !== view;
 }
@@ -49,27 +30,9 @@ function setWho() {
     : "";
 }
 
-/* ---------- tabs ---------- */
-
-function showTab(name) {
-  if (!["review", "try"].includes(name)) name = "review";
-  for (const tab of ["review", "try"]) $("tab-" + tab).hidden = tab !== name;
-  for (const btn of document.querySelectorAll(".tabs [role=tab]")) {
-    btn.setAttribute("aria-selected", btn.dataset.tab === name ? "true" : "false");
-  }
-  if (location.hash !== "#" + name) history.replaceState(null, "", "#" + name);
-}
-
-for (const btn of document.querySelectorAll(".tabs [role=tab]")) {
-  btn.addEventListener("click", () => showTab(btn.dataset.tab));
-}
-window.addEventListener("hashchange", () => showTab(location.hash.slice(1)));
-
 /* ---------- sign in ---------- */
 
 async function start() {
-  showTab(location.hash.slice(1));
-  checkModel();
   if (token) {
     try {
       const me = await api("/me");
@@ -287,29 +250,6 @@ $("score-buttons").addEventListener("click", (e) => {
 });
 
 $("back").addEventListener("click", openDatasets);
-
-/* ---------- try the model (no sign-in needed) ---------- */
-
-async function checkModel() {
-  let online = false;
-  try {
-    const health = await api("/health");
-    online = !!(health.gpu && health.gpu.configured && health.gpu.ok !== false);
-  } catch { online = false; }
-  $("gen-offline").hidden = online;
-  $("gen-submit").disabled = !online;
-  $("gen-prompt").disabled = !online;
-}
-
-$("gen-form").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  $("gen-out").textContent = t("try.wait");
-  try {
-    const data = await api("/generate", { method: "POST",
-      body: { prompt: $("gen-prompt").value } });
-    $("gen-out").textContent = `${data.text}\n\n[${data.model} · ${data.ms} ms]`;
-  } catch (err) { $("gen-out").textContent = err.message; }
-});
 
 document.addEventListener("langchange", () => { renderProgress(); });
 
