@@ -31,5 +31,13 @@ What it does:
 
 ## Deploy
 
-Copy the files (keeping the `app/` folder) to the Caddy web root (see the
-backend repo's `deploy/Caddyfile`). That's all.
+Hosted on Cloudflare Pages (project `aceh-nlp`), connected to this repo: every
+push to `main` deploys; other branches get preview URLs. No build step.
+
+- `functions/api/[[path]].js` forwards `/api/*` to the backend on the server
+  (default origin set in the file; override with the `API_ORIGIN` variable in
+  the Pages project settings), so pages keep calling same-origin `/api`.
+- `_headers` carries the security headers and `noindex` for `/app/*`;
+  `_redirects` sends `www` to the apex.
+
+Local check: `npx wrangler pages dev .`
