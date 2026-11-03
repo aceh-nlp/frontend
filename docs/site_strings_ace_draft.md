@@ -226,9 +226,9 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **login.note**
-- ID: Tinjauan Anda dicatat dengan email dan dialek Anda agar kami tahu siapa menilai apa. Kami mengirim kode sekali pakai ke email Anda; tidak ada kata sandi.
-- EN: Your reviews are recorded under your email and dialect so we know who evaluated what. We email you a one-time code; there is no password.
-- ACE draft: Hasé pareksa droeneuh geucatat ngon email ngon dialék droeneuh mangat kamoe meuteupeue soe nyang nilai peue. Kamoe peugisa kode sigo pakai u email droeneuh; hana kata sandi.
+- ID: Kami menyimpan email dan dialek Anda bersama setiap tinjauan, agar kami tahu siapa menilai apa. Nama bersifat opsional dan hanya tersimpan di peramban Anda. Cloudflare mengirim kode masuk dan DigitalOcean menyimpan tinjauan. Nilai dan koreksi Anda dapat diterbitkan dalam dataset bahasa Aceh terbuka kami, tanpa email Anda. Untuk melihat atau menghapus data Anda, tulis ke hello@aceh-nlp.net. Teks yang sudah terbit mungkin tidak dapat dihapus dari salinan yang sudah dimiliki orang lain. Kami mengirim kode sekali pakai ke email Anda; tidak ada kata sandi.
+- EN: We keep your email and dialect with each review, so we know who evaluated what. Your name is optional and stays in your browser. Cloudflare sends the sign-in code and DigitalOcean stores the reviews. Your scores and corrections may be published in our open Acehnese dataset, without your email. To see or delete your data, write to hello@aceh-nlp.net. Published text may be impossible to remove from copies others already have. We email you a one-time code; there is no password.
+- ACE draft: Kamoe simpan email ngon dialék droeneuh ngon tiep pareksa, mangat kamoe meuteupeue soe nyang nilai peue. Nan hana wajéb ngon meusimpan bak browser droeneuh mantong. Cloudflare geupeugisa kode tamong ngon DigitalOcean geusimpan hasé pareksa. Nilai ngon peubeutôi droeneuh jeuet geupeuteubit lam dataset basa Aceh nyang teubuka, hana ngon email droeneuh. Keu neukalon atawa neusampôh data droeneuh, neutuléh u hello@aceh-nlp.net. Teks nyang ka teubit mungkin hana jeuet geusampôh nibak salinan nyang ka na bak ureueng laén. Kamoe peugisa kode sigo pakai u email droeneuh; hana kata sandi.
 - Koreksi:
 
 **login.email**
