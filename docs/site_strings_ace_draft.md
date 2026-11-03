@@ -582,9 +582,3 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - EN: Results show where to collect next.
 - ACE draft: Hasé jipeudeuh pat takumpoi nyang teuma.
 - Koreksi:
-
-**loop.status**
-- ID: Kami baru di awal. 162 kalimat pertama adalah draf AI yang menunggu diperiksa penutur. Pelatihan dimulai setelah cukup banyak yang diperiksa.
-- EN: We are at the very start. The first 162 sentences are AI drafts waiting for speakers to check them. Training starts once enough are checked.
-- ACE draft: Kamoe baro bak phôn. 162 kalimat phôn nakeuh draf AI nyang preh geupareksa lé ureueng Aceh. Latéh geumulai meunyo ka le geupareksa.
-- Koreksi:

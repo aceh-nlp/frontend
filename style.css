@@ -133,7 +133,6 @@ button:disabled { opacity: .5; cursor: default; filter: none; }
 .return b { display: block; font: 600 1rem var(--serif); }
 .return-a { border-left-color: var(--coral-ink); }
 .return-b { border-left-color: var(--accent); }
-.loop-status { margin: 18px 0 0; font-weight: 600; max-width: 680px; }
 
 .loop.is-animated { grid-template-columns: minmax(290px, 340px) minmax(0, 1fr); gap: 32px; align-items: start; }
 .is-animated .loop-controls { display: block; margin-top: 12px; }
