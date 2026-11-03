@@ -31,13 +31,15 @@ What it does:
 
 ## Deploy
 
-Hosted on Cloudflare Pages (project `aceh-nlp`), connected to this repo: every
-push to `main` deploys; other branches get preview URLs. No build step.
+A Cloudflare Worker (`aceh-nlp-website`) connected to this repo: every push to
+`main` deploys with `npx wrangler deploy`; other branches get preview builds.
+No build step.
 
-- `functions/api/[[path]].js` forwards `/api/*` to the backend on the server
-  (default origin set in the file; override with the `API_ORIGIN` variable in
-  the Pages project settings), so pages keep calling same-origin `/api`.
+- `wrangler.toml` serves the repo as static assets and runs `worker.js` first
+  for `/api/*`, which forwards to the backend on the server (`API_ORIGIN`),
+  so pages keep calling same-origin `/api`.
 - `_headers` carries the security headers and `noindex` for `/app/*`;
-  `_redirects` sends `www` to the apex.
+  `_redirects` sends `www` to the apex. `.assetsignore` keeps code and docs
+  out of the published files.
 
-Local check: `npx wrangler pages dev .`
+Local check: `npx wrangler dev`
