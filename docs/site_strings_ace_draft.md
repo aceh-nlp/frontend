@@ -211,16 +211,10 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - ACE draft: Neubantu ureueng meuphôm proyek nyoe deungon jujô.
 - Koreksi:
 
-**join.contact.link**
-- ID: Tulis kepada kami di GitHub
-- EN: Write to us on GitHub
-- ACE draft: Neutuléh keu kamoe bak GitHub
-- Koreksi:
-
 **join.contact**
-- ID: Tulisan di sana bersifat publik, jadi jangan sertakan data pribadi. Alamat email akan segera tersedia.
-- EN: Posts there are public, so please leave out personal details. An email address is coming soon.
-- ACE draft: Tulisan nyan jeuet geubaca lé ban mandum ureueng, nyan pasai bèk neupeutamong data droe. Alamat email hana trép teuk na.
+- ID: Untuk ikut serta, tulis ke
+- EN: To take part, write to
+- ACE draft: Keu meuikot, neutuléh u
 - Koreksi:
 
 ## Tool page

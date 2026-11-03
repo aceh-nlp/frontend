@@ -85,8 +85,7 @@ const STRINGS = {
     "join.legal.text": "Permits, consent and data protection.",
     "join.story.title": "Design, write, film",
     "join.story.text": "Help people understand the project honestly.",
-    "join.contact.link": "Write to us on GitHub",
-    "join.contact": "Posts there are public, so please leave out personal details. An email address is coming soon.",
+    "join.contact": "To take part, write to",
 
 
 
@@ -216,8 +215,7 @@ const STRINGS = {
     "join.legal.text": "Perizinan, persetujuan, dan perlindungan data.",
     "join.story.title": "Desain, tulis, film",
     "join.story.text": "Bantu orang memahami proyek ini dengan jujur.",
-    "join.contact.link": "Tulis kepada kami di GitHub",
-    "join.contact": "Tulisan di sana bersifat publik, jadi jangan sertakan data pribadi. Alamat email akan segera tersedia.",
+    "join.contact": "Untuk ikut serta, tulis ke",
 
 
 
@@ -341,8 +339,7 @@ const STRINGS = {
     "join.legal.text": "Izin, persetujuan, ngon peulindông data.",
     "join.story.title": "Desain, tuléh, film",
     "join.story.text": "Neubantu ureueng meuphôm proyek nyoe deungon jujô.",
-    "join.contact.link": "Neutuléh keu kamoe bak GitHub",
-    "join.contact": "Tulisan nyan jeuet geubaca lé ban mandum ureueng, nyan pasai bèk neupeutamong data droe. Alamat email hana trép teuk na.",
+    "join.contact": "Keu meuikot, neutuléh u",
     "login.title": "Tamong",
     "login.note": "Hasé pareksa droeneuh geucatat ngon email ngon dialék droeneuh mangat kamoe meuteupeue soe nyang nilai peue. Kamoe peugisa kode sigo pakai u email droeneuh; hana kata sandi.",
     "login.email": "Email",
