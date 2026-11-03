@@ -109,17 +109,6 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - ACE draft: Keu tamong sibagoe ahli atawa mitra, neuhubông tim proyek.
 - Koreksi:
 
-**footer.data**
-- ID: Data di aceh-nlp/dataset
-- EN: Data in aceh-nlp/dataset
-- ACE draft: Data bak aceh-nlp/dataset
-- Koreksi:
-
-**footer.api**
-- ID: API di aceh-nlp/backend
-- EN: API in aceh-nlp/backend
-- ACE draft: API bak aceh-nlp/backend
-- Koreksi:
 
 ## Tool page
 
