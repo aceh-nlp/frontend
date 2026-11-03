@@ -23,8 +23,10 @@ const STRINGS = {
     "nav.home": "About the project",
     "lang.label": "Language",
 
-    "hero.title": "Keeping Acehnese alive, together",
-    "hero.lead": "Language models already speak some Acehnese; they need the polish only its speakers can give. We are a community-led, local-first project using these models as an instrument to preserve Acehnese culture in an interactive way — one checked sentence at a time.",
+    "hero.title": "A language lives where it is spoken.",
+    "hero.p1": "Acehnese is carried in kitchens, on fishing boats and over coffee, far from the data that trained today’s models. So we begin close to home, on Pulau Weh, with speakers gathering their own words, together.",
+    "hero.p2": "A language model can be more than a product. Held by a community, it becomes a living archive: one you can question, correct and teach, so knowledge keeps moving, as it always has, from one voice to the next.",
+    "hero.p3": "Large models learned about Aceh from other people’s choices, and inherited their blind spots. Decolonising this technology starts with a simple shift: speakers decide what counts as data, who checks it, and what it is for.",
 
     "why.title": "Why this matters",
     "why.p1": "About 3.4 million people speak Acehnese, yet almost no open, transcribed speech exists for it. Existing models were trained mostly on Bible text and stumble on everyday conversation.",
@@ -113,8 +115,10 @@ const STRINGS = {
     "nav.home": "Tentang proyek",
     "lang.label": "Bahasa",
 
-    "hero.title": "Menjaga bahasa Aceh tetap hidup, bersama-sama",
-    "hero.lead": "Model bahasa sudah bisa sedikit berbahasa Aceh; yang dibutuhkan adalah penyempurnaan yang hanya bisa diberikan penuturnya. Kami proyek yang dipimpin komunitas dan mengutamakan lokal, memakai model ini sebagai alat untuk melestarikan budaya Aceh secara interaktif — satu kalimat terperiksa pada satu waktu.",
+    "hero.title": "Bahasa hidup di tempat ia dituturkan.",
+    "hero.p1": "Bahasa Aceh dibawa di dapur, di atas perahu nelayan, dan di meja kopi, jauh dari data yang melatih model-model hari ini. Karena itu kami mulai dari dekat, di Pulau Weh, bersama para penutur yang mengumpulkan kata-kata mereka sendiri, bersama-sama.",
+    "hero.p2": "Model bahasa bisa lebih dari sekadar produk. Di tangan komunitas, ia menjadi arsip hidup: yang bisa ditanya, dikoreksi, dan diajari, sehingga pengetahuan terus bergerak, seperti selama ini, dari satu suara ke suara berikutnya.",
+    "hero.p3": "Model besar mengenal Aceh dari pilihan orang lain, dan mewarisi titik butanya. Dekolonisasi teknologi ini dimulai dari satu pergeseran sederhana: penuturlah yang menentukan apa yang dihitung sebagai data, siapa yang memeriksanya, dan untuk apa.",
 
     "why.title": "Mengapa ini penting",
     "why.p1": "Sekitar 3,4 juta orang berbahasa Aceh, tetapi hampir tidak ada rekaman tutur yang ditranskripsi dan terbuka. Model yang ada kebanyakan dilatih dari teks Alkitab dan tersandung pada percakapan sehari-hari.",
@@ -199,8 +203,10 @@ const STRINGS = {
     "nav.try": "Cuba model nyoe",
     "nav.home": "Hai proyek nyoe",
     "lang.label": "Basa",
-    "hero.title": "Tapeuudep basa Aceh, meusajan",
-    "hero.lead": "Model basa ka jeuet meututoe basa Aceh bacut; nyang peureulèe jinoe peugöt nyang hana jeuet geubri lé soe laén seulaén ureueng nyang meututoe basa nyan. Kamoe proyek nyang geupimpin lé masyarakat ngon nyang peuutama ureueng lokal, tapeuguna model nyoe sibagoe alat keu tapeulestari budaya Aceh ngon cara interaktif — saboh kalimat nyang ka geupareksa bak sigo watèe.",
+    "hero.title": "Basa udep di teumpat geumarit.",
+    "hero.p1": "Basa Aceh geuba lam dapu, ateuh peurahô nelayan, ngon bak meja kupi, jioh nibak data nyang geulatéh model-model jinoe. Kareuna nyan kamoe mulai dari toe, di Pulo Weh, ngon ureueng nyang meututoe geukumpoi narit droe, meusajan.",
+    "hero.p2": "Model basa jeuet leubèh nibak produk. Bak jaroe masyarakat, jih jeuet keu arsip udep: jeuet tatanyong, tapeubeutôi, ngon tapeurunoe, mangat teupeue teutap jijak, lagèe nyang ka sabé, dari saboh su u su laén.",
+    "hero.p3": "Model rayek geuteupeue Aceh dari piléh ureueng laén, ngon jipeusaka titèk buta jih. Dekolonisasi teknologi nyoe geumulai ngon saboh meuubah nyang mudah: ureueng nyang meututoe nyang peutentèe peue nyang jeuet keu data, soe nyang pareksa, ngon keu peue.",
     "why.title": "Pakon nyoe peunteng",
     "how.title": "Kiban cara keureuja jih",
     "how.note": "Makin u ateueh makin gét; makin u yup makin le. Hana nyang ék lapisan meunyo hana ureueng.",
