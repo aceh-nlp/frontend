@@ -27,7 +27,6 @@ What it does:
   optionally with a correction and annotation. Everyone else gives +1 or -1. The
   backend decides the tier. Auto-advances and auto-saves on each review.
 - **Upload**: a coordinator uploads a JSON/JSONL file of pairs for speakers to review.
-- **Export**: a coordinator downloads collected ratings with the admin token.
 
 ## Deploy
 

@@ -127,7 +127,7 @@ async function openDatasets() {
   const { datasets } = await api("/datasets");
   const ul = $("dataset-list");
   ul.innerHTML = "";
-  // raw/ holds source files for the merged dataset; coordinators still get them below.
+  // raw/ holds source files for the merged dataset.
   const reviewable = datasets.filter((d) => !d.dataset.includes("/raw/"));
   for (const d of reviewable) {
     const li = document.createElement("li");
@@ -148,13 +148,6 @@ async function openDatasets() {
     btn.addEventListener("click", () => openReview(d.dataset));
     li.appendChild(btn);
     ul.appendChild(li);
-  }
-  const names = $("dataset-names");
-  names.innerHTML = "";
-  for (const d of datasets) {
-    const o = document.createElement("option");
-    o.value = d.dataset;
-    names.appendChild(o);
   }
   if (!reviewable.length) {
     ul.innerHTML = "";
@@ -183,19 +176,6 @@ $("upload-form").addEventListener("submit", async (e) => {
       `Uploaded as "${data.dataset}" (${data.rows} rows). Share this page and the dataset name with your speakers.`;
     openDatasets();
   } catch (err) { alert(err.message); }
-});
-
-$("export-form").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const ds = $("export-dataset").value;
-  const resp = await fetch(`/api/export?dataset=${encodeURIComponent(ds)}`,
-    { headers: { Authorization: "Bearer " + $("export-token").value } });
-  if (!resp.ok) return alert((await resp.json()).error || resp.statusText);
-  const blob = new Blob([await resp.text()], { type: "application/json" });
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = ds.replaceAll("/", "_") + "_ratings.json";
-  a.click();
 });
 
 /* ---------- review ---------- */

@@ -226,29 +226,8 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - ACE draft: Peuék
 - Koreksi:
 
-**export.title**
-- ID: Unduh tinjauan
-- EN: Download reviews
-- ACE draft: Peutrôn hasé pareksa
-- Koreksi:
 
-**export.dataset**
-- ID: Dataset
-- EN: Dataset
-- ACE draft: Dataset
-- Koreksi:
 
-**export.token**
-- ID: Token admin
-- EN: Admin token
-- ACE draft: Token admin
-- Koreksi:
-
-**export.submit**
-- ID: Unduh JSON
-- EN: Download JSON
-- ACE draft: Peutrôn JSON
-- Koreksi:
 
 **review.back**
 - ID: ← dataset
