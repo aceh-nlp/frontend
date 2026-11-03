@@ -429,40 +429,162 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - ACE draft: Lapisan
 - Koreksi:
 
-## Added with the three-step section
+## Added with the loop section
 
-**how.s1.title**
-- ID: Pengumpulan data
-- EN: Data collection
-- ACE draft: Kumpoi data
+
+
+
+
+**loop.specialist.title**
+- ID: Spesialis
+- EN: Specialists
+- ACE draft: Ahli
 - Koreksi:
 
-**how.s1.text**
-- ID: Semuanya dimulai dari teks dan tuturan bahasa Aceh, yang dipilah menurut seberapa jauh bisa dipercaya.
-- EN: Everything starts with Acehnese text and speech, sorted by how far it can be trusted.
-- ACE draft: Bandum geumulai nibak teks ngon tutoe basa Aceh, nyang geupisah meunurot padum jeuet geupeucaya.
+**loop.specialist**
+- ID: Memberi nilai 1–5, mengoreksi, dan memberi catatan.
+- EN: Rate 1–5, correct and annotate.
+- ACE draft: Geubri nilai 1–5, geupeubeutôi, ngon geubri catatan.
 - Koreksi:
 
-**how.s2.title**
-- ID: Anotasi
-- EN: Annotation
-- ACE draft: Anotasi
+**loop.everyday.title**
+- ID: Penutur sehari-hari
+- EN: Everyday speakers
+- ACE draft: Ureueng nyang marit uroe-uroe
 - Koreksi:
 
-**how.s2.text**
-- ID: Penutur meninjau setiap kalimat. Spesialis memberi nilai 1–5, mengoreksi, dan memberi catatan. Penutur sehari-hari cukup memberi +1 atau −1.
-- EN: Speakers review each sentence. Specialists rate it 1–5, correct it and annotate it. Everyday speakers give a quick +1 or −1.
-- ACE draft: Ureueng Aceh geupareksa tiep kalimat. Ahli geubri nilai 1–5, geupeubeutôi, ngon geubri catatan. Ureueng nyang marit uroe-uroe cukôp geubri +1 atawa −1.
+**loop.everyday**
+- ID: Cukup +1 atau −1.
+- EN: A quick +1 or −1.
+- ACE draft: Cukôp +1 atawa −1.
 - Koreksi:
 
-**how.s3.title**
-- ID: Pelatihan dan evaluasi
-- EN: Training and evaluation
-- ACE draft: Latéh ngon evaluasi
+
+
+
+
+**loop.pause**
+- ID: Jeda
+- EN: Pause
+- ACE draft: Piyôh
 - Koreksi:
 
-**how.s3.text**
-- ID: Data yang sudah ditinjau melatih model bahasa. Sebagian data yang diperiksa disisihkan dan tidak pernah dipakai untuk melatih, sehingga model diuji pada kalimat yang belum pernah dilihatnya, dan penuturlah yang menilai hasilnya. Tahap ini dimulai setelah cukup banyak kalimat diperiksa.
-- EN: Reviewed data trains language models. Part of the checked data is held back and never trained on, so models are tested on sentences they have not seen, and speakers judge the results. This step starts once enough sentences are checked.
-- ACE draft: Data nyang ka geupareksa geupeuguna keu latéh model basa. Siseun data nyang ka geupareksa geupeuasoe, hana geupeuguna keu latéh, mangat model geuuji ngon kalimat nyang gohlom jikalon, ngon ureueng Aceh nyang nilai hasé jih. Tahap nyoe geumulai meunyo ka le kalimat geupareksa.
+**loop.play**
+- ID: Putar
+- EN: Play
+- ACE draft: Puta
+- Koreksi:
+
+**loop.intro**
+- ID: Ia tumbuh seperti pohon kelapa, dan buahnya memulai putaran berikutnya.
+- EN: It grows like a coconut palm, and its fruit starts the next round.
+- ACE draft: Jih timoh lagèe bak u, ngon boh jih geupeumulai putaran nyang teuma.
+- Koreksi:
+
+**loop.s1.title**
+- ID: Benih
+- EN: Seed
+- ACE draft: Bijeh
+- Koreksi:
+
+**loop.s1.poem**
+- ID: Benih menyimpan yang hidup.
+- EN: The seed holds what is alive.
+- ACE draft: Bijeh jipeuteun nyang udep.
+- Koreksi:
+
+**loop.s1.text**
+- ID: Semuanya berawal dari kalimat yang diperiksa spesialis: sedikit saja, tetapi menunjukkan seperti apa bahasa Aceh yang baik.
+- EN: It starts with sentences specialists have checked: only a few, but they show what good Acehnese sounds like.
+- ACE draft: Geumulai nibak kalimat nyang ka geupareksa lé ahli: bacut mantong, teuma jipeudeuh kiban basa Aceh nyang gét.
+- Koreksi:
+
+**loop.s2.title**
+- ID: Akar
+- EN: Roots
+- ACE draft: Ukheue
+- Koreksi:
+
+**loop.s2.poem**
+- ID: Akar menjangkau keluar.
+- EN: The roots reach out.
+- ACE draft: Ukheue jijak u luwa.
+- Koreksi:
+
+**loop.s2.text**
+- ID: Teks dan tuturan bahasa Aceh dikumpulkan, dipilah menurut seberapa jauh bisa dipercaya.
+- EN: Acehnese text and speech are gathered, sorted by how far they can be trusted.
+- ACE draft: Teks ngon tutoe basa Aceh geukumpoi, geupisah meunurot padum jeuet geupeucaya.
+- Koreksi:
+
+**loop.s3.title**
+- ID: Pohon
+- EN: Palm
+- ACE draft: Bak u
+- Koreksi:
+
+**loop.s3.poem**
+- ID: Pohon tumbuh, dan dicicipi.
+- EN: The palm grows, and is tasted.
+- ACE draft: Bak jitimoh, ngon geurasa.
+- Koreksi:
+
+**loop.s3.text**
+- ID: Data yang sudah diperiksa melatih model bahasa. Penutur memeriksa data baru dan jawaban model dengan cara yang sama.
+- EN: Checked data trains a language model. Speakers check new data and model answers in the same way.
+- ACE draft: Data nyang ka geupareksa geupeuguna keu latéh model basa. Ureueng Aceh geupareksa data baro ngon jaweueb model ngon cara nyang sama.
+- Koreksi:
+
+**loop.s4.title**
+- ID: Buah
+- EN: Fruit
+- ACE draft: Boh
+- Koreksi:
+
+**loop.s4.poem**
+- ID: Buah membawa benih baru.
+- EN: The fruit carries new seeds.
+- ACE draft: Boh jiba bijeh baro.
+- Koreksi:
+
+**loop.s4.text**
+- ID: Model menulis draf baru. Yang diterima penutur menjadi benih putaran berikutnya.
+- EN: The model writes new drafts. What speakers accept becomes the seeds of the next round.
+- ACE draft: Model jipeugöt draf baro. Nyang geuteurimong lé ureueng Aceh jeuet keu bijeh putaran nyang teuma.
+- Koreksi:
+
+**loop.check.title**
+- ID: Penutur memeriksa
+- EN: Speakers check
+- ACE draft: Ureueng Aceh geupareksa
+- Koreksi:
+
+**loop.return1.title**
+- ID: Benih belajar dari buahnya
+- EN: The seed learns from its fruit
+- ACE draft: Bijeh jibeulajai nibak boh jih
+- Koreksi:
+
+**loop.return1.text**
+- ID: Koreksi mengajari model apa yang patut dikatakan.
+- EN: Corrections teach the model what is worth saying.
+- ACE draft: Peubeutôi jipeurunoe model peue nyang patôt jipeugah.
+- Koreksi:
+
+**loop.return2.title**
+- ID: Akar menuju tanah yang lebih subur
+- EN: The roots reach for richer ground
+- ACE draft: Ukheue jijak u tanoh nyang leubèh subur
+- Koreksi:
+
+**loop.return2.text**
+- ID: Hasil menunjukkan di mana harus mengumpulkan berikutnya.
+- EN: Results show where to collect next.
+- ACE draft: Hasé jipeudeuh pat takumpoi nyang teuma.
+- Koreksi:
+
+**loop.status**
+- ID: Kami baru di awal. 162 kalimat pertama adalah draf AI yang menunggu diperiksa penutur. Pelatihan dimulai setelah cukup banyak yang diperiksa.
+- EN: We are at the very start. The first 162 sentences are AI drafts waiting for speakers to check them. Training starts once enough are checked.
+- ACE draft: Kamoe baro bak phôn. 162 kalimat phôn nakeuh draf AI nyang preh geupareksa lé ureueng Aceh. Latéh geumulai meunyo ka le geupareksa.
 - Koreksi:

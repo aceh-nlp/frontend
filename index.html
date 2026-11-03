@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,10 +17,10 @@
       <span id="lang-switch" class="lang-switch" role="group" aria-label="Language"></span>
     </nav>
   </header>
-  <p id="draft-notice" class="notice wrap-notice" hidden data-i18n="draft.notice"></p>
+  <p id="draft-notice" class="notice wrap-notice" hidden data-i18n="draft.notice">This Acehnese text is an AI draft awaiting correction by native speakers. If something is wrong, please help us fix it.</p>
   <div class="hero-body wrap">
     <h1 data-i18n="hero.title">A language lives where it is spoken.</h1>
-    <p class="lead" data-i18n="hero.lead"></p>
+    <p class="lead" data-i18n="hero.lead">Acehnese is carried in kitchens, on fishing boats and over coffee, far from the data that trained today’s models, which learned about Aceh from other people’s choices and inherited their blind spots. We are a small group from different backgrounds, gathered on Pulau Weh by curiosity and care for the language, helping speakers collect their own words and decide what counts as data, who checks it, and what it is for. This is how we begin to decolonise the technology: a language model held by a community becomes a living archive, one you can question, correct and teach, so knowledge keeps moving, as it always has, from one voice to the next.</p>
     <p class="cta-row">
       <a class="button coral" href="/app/#review" data-i18n="nav.review">Review sentences</a>
       <a class="button ghost" href="/app/#try" data-i18n="nav.try">Try the model</a>
@@ -34,54 +34,123 @@
 
 <main>
   <section class="stats wrap" aria-label="Project in numbers">
-    <div><b data-i18n="stat.speakers.n">3.4 million</b><span data-i18n="stat.speakers"></span></div>
-    <div><b>162</b><span data-i18n="stat.drafts"></span></div>
-    <div><b>6</b><span data-i18n="stat.team"></span></div>
+    <div><b data-i18n="stat.speakers.n">3.4 million</b><span data-i18n="stat.speakers">people speak Acehnese</span></div>
+    <div><b>162</b><span data-i18n="stat.drafts">AI-drafted sentences waiting for speakers</span></div>
+    <div><b>6</b><span data-i18n="stat.team">of us on Pulau Weh</span></div>
   </section>
 
   <section id="why" class="wrap narrow">
     <h2 data-i18n="why.title">Why this matters</h2>
-    <p data-i18n="why.p1"></p>
-    <p data-i18n="why.p2"></p>
+    <p data-i18n="why.p1">About 3.4 million people speak Acehnese, yet almost no open, transcribed speech exists for it. Existing models were trained mostly on Bible text and stumble on everyday conversation.</p>
+    <p data-i18n="why.p2">In our own tests, models produced Acehnese that native speakers could recognise but would still correct. That polish has to come from the community itself, so the project starts with people, and the models become a tool the community shapes and uses.</p>
   </section>
 
   <section id="how" class="wrap">
     <h2 data-i18n="how.title">How it works</h2>
-    <ol class="steps">
-      <li>
-        <h3 data-i18n="how.s1.title">Data collection</h3>
-        <p class="step-text" data-i18n="how.s1.text"></p>
-        <ul class="layers">
-          <li><span class="bar" style="--w:34%"></span><div><b data-i18n="how.l1.title"></b><p data-i18n="how.l1.text"></p></div></li>
-          <li><span class="bar" style="--w:64%"></span><div><b data-i18n="how.l2.title"></b><p data-i18n="how.l2.text"></p></div></li>
-          <li><span class="bar" style="--w:100%"></span><div><b data-i18n="how.l3.title"></b><p data-i18n="how.l3.text"></p></div></li>
-        </ul>
-        <p class="muted" data-i18n="how.note"></p>
-      </li>
-      <li>
-        <h3 data-i18n="how.s2.title">Annotation</h3>
-        <p class="step-text" data-i18n="how.s2.text"></p>
-        <article class="demo-card">
-          <p class="eyebrow" data-i18n="demo.label">AI draft, not yet checked</p>
-          <p class="sentence">Lôn beudôh poh limong beungoh.</p>
-          <p class="muted" data-i18n="demo.translation"></p>
-          <p class="demo-question" data-i18n="demo.question"></p>
-          <p class="demo-votes">
-            <a class="button vote" href="/app/#review">+1</a>
-            <a class="button vote" href="/app/#review">−1</a>
-          </p>
+    <p class="step-text" data-i18n="loop.intro">It grows like a coconut palm, and its fruit starts the next round.</p>
+    <div id="loop" class="loop">
+      <div class="loop-scene">
+        <svg id="palm" class="palm" viewBox="0 0 340 380" aria-hidden="true">
+          <rect class="soil" x="0" y="250" width="340" height="130" rx="14"/>
+          <g class="part part-roots">
+            <path d="M170 258 C168 285 150 305 112 322"/>
+            <path d="M170 258 C172 290 190 312 232 328"/>
+            <path d="M170 258 C166 276 140 282 96 286"/>
+            <path d="M170 258 C174 278 204 284 248 288"/>
+            <path d="M170 258 C170 295 168 325 170 352"/>
+          </g>
+          <g class="part part-votes">
+            <circle class="up" cx="96" cy="286" r="5"/><text class="up" x="96" y="274">+1</text>
+            <circle class="down" cx="112" cy="322" r="5"/><text class="down" x="112" y="344">−1</text>
+            <circle class="up" cx="248" cy="288" r="5"/><text class="up" x="248" y="276">+1</text>
+            <circle class="up" cx="232" cy="328" r="5"/><text class="up" x="232" y="350">+1</text>
+          </g>
+          <g class="part part-palm">
+            <path class="trunk" d="M170 250 C174 200 176 150 190 96"/>
+            <path d="M190 96 Q150 50 96 88 Q150 72 190 96Z"/>
+            <path d="M190 96 Q170 52 128 44 Q168 64 190 96Z"/>
+            <path d="M190 96 Q198 46 244 46 Q208 62 190 96Z"/>
+            <path d="M190 96 Q236 58 286 92 Q236 78 190 96Z"/>
+            <path d="M190 96 Q146 98 112 140 Q152 108 190 96Z"/>
+            <path d="M190 96 Q232 98 264 142 Q228 108 190 96Z"/>
+          </g>
+          <circle class="glow" cx="170" cy="242" r="30"/>
+          <g class="seed">
+            <ellipse cx="170" cy="242" rx="18" ry="14"/>
+            <circle cx="164" cy="238" r="1.8"/><circle cx="172" cy="236" r="1.8"/><circle cx="168" cy="244" r="1.8"/>
+          </g>
+          <g class="part part-fruit">
+            <circle cx="180" cy="108" r="8"/><circle cx="199" cy="110" r="8"/><circle cx="189" cy="122" r="8"/>
+          </g>
+          <g class="part part-returns">
+            <path class="return-seed" d="M176 130 C118 170 116 214 148 236 M139 238 L148 236 L147 227"/>
+            <path class="return-roots" d="M204 130 C292 170 302 250 256 284 M256 275 L256 284 L265 285"/>
+          </g>
+        </svg>
+        <div class="loop-controls">
+          <div class="loop-stages">
+            <button type="button" class="loop-stage"><b>1</b><span data-i18n="loop.s1.title">Seed</span></button>
+            <button type="button" class="loop-stage"><b>2</b><span data-i18n="loop.s2.title">Roots</span></button>
+            <button type="button" class="loop-stage"><b>3</b><span data-i18n="loop.s3.title">Palm</span></button>
+            <button type="button" class="loop-stage"><b>4</b><span data-i18n="loop.s4.title">Fruit</span></button>
+          </div>
+          <button type="button" id="loop-toggle" class="loop-toggle" data-i18n="loop.pause">Pause</button>
+        </div>
+      </div>
+      <div class="loop-panels">
+        <article class="loop-panel">
+          <h3><b>1</b><span data-i18n="loop.s1.title">Seed</span></h3>
+          <p class="poem" data-i18n="loop.s1.poem">The seed holds what is alive.</p>
+          <p data-i18n="loop.s1.text">It starts with sentences specialists have checked: only a few, but they show what good Acehnese sounds like.</p>
         </article>
-      </li>
-      <li>
-        <h3 data-i18n="how.s3.title">Training and evaluation</h3>
-        <p class="step-text" data-i18n="how.s3.text"></p>
-      </li>
-    </ol>
+        <article class="loop-panel">
+          <h3><b>2</b><span data-i18n="loop.s2.title">Roots</span></h3>
+          <p class="poem" data-i18n="loop.s2.poem">The roots reach out.</p>
+          <p data-i18n="loop.s2.text">Acehnese text and speech are gathered, sorted by how far they can be trusted.</p>
+          <ul class="layers">
+            <li><span class="bar" style="--w:34%"></span><div><b data-i18n="how.l1.title">Specialist-checked</b><p data-i18n="how.l1.text">Sentences checked and corrected by educated native speakers from NGOs and institutions. The best data, and the smallest.</p></div></li>
+            <li><span class="bar" style="--w:64%"></span><div><b data-i18n="how.l2.title">Everyday speakers</b><p data-i18n="how.l2.text">Daily speakers, recordings and internet text, with a quick check from speakers.</p></div></li>
+            <li><span class="bar" style="--w:100%"></span><div><b data-i18n="how.l3.title">Synthetic</b><p data-i18n="how.l3.text">AI-drafted sentences, clearly marked as unverified. The most plentiful and the least trusted — until a speaker corrects them.</p></div></li>
+          </ul>
+          <p class="muted" data-i18n="how.note">Quality goes up the list; volume goes down. Nothing moves up a layer without a human.</p>
+        </article>
+        <article class="loop-panel">
+          <h3><b>3</b><span data-i18n="loop.s3.title">Palm</span></h3>
+          <p class="poem" data-i18n="loop.s3.poem">The palm grows, and is tasted.</p>
+          <p data-i18n="loop.s3.text">Checked data trains a language model. Speakers check new data and model answers in the same way.</p>
+          <div class="check-box">
+            <p class="eyebrow" data-i18n="loop.check.title">Speakers check</p>
+            <div class="check-who">
+              <p><b data-i18n="loop.specialist.title">Specialists</b><span data-i18n="loop.specialist">Rate 1–5, correct and annotate.</span></p>
+              <p><b data-i18n="loop.everyday.title">Everyday speakers</b><span data-i18n="loop.everyday">A quick +1 or −1.</span></p>
+            </div>
+            <p class="eyebrow" data-i18n="demo.label">AI draft, not yet checked</p>
+            <p class="sentence" lang="ace">Lôn beudôh poh limong beungoh.</p>
+            <p class="muted" data-i18n="demo.translation">I get up at five in the morning.</p>
+            <p class="demo-question" data-i18n="demo.question">Does this sound right to you?</p>
+            <p class="demo-votes">
+              <a class="button vote" href="/app/#review">+1</a>
+              <a class="button vote" href="/app/#review">−1</a>
+            </p>
+          </div>
+        </article>
+        <article class="loop-panel">
+          <h3><b>4</b><span data-i18n="loop.s4.title">Fruit</span></h3>
+          <p class="poem" data-i18n="loop.s4.poem">The fruit carries new seeds.</p>
+          <p data-i18n="loop.s4.text">The model writes new drafts. What speakers accept becomes the seeds of the next round.</p>
+        </article>
+      </div>
+    </div>
+    <div class="returns">
+      <p class="return return-a"><b data-i18n="loop.return1.title">The seed learns from its fruit</b><span data-i18n="loop.return1.text">Corrections teach the model what is worth saying.</span></p>
+      <p class="return return-b"><b data-i18n="loop.return2.title">The roots reach for richer ground</b><span data-i18n="loop.return2.text">Results show where to collect next.</span></p>
+    </div>
+    <p class="loop-status" data-i18n="loop.status">We are at the very start. The first 162 sentences are AI drafts waiting for speakers to check them. Training starts once enough are checked.</p>
   </section>
 
   <section id="people" class="wrap">
     <h2 data-i18n="people.title">People behind it</h2>
-    <p class="narrow-text" data-i18n="people.intro"></p>
+    <p class="narrow-text" data-i18n="people.intro">Six of us, living and experimenting together on Pulau Weh — which is how the project began. We come from different places and backgrounds:</p>
     <ul class="people">
       <li><span class="avatar" aria-hidden="true">C</span>catslovefish.eth</li>
       <li><span class="avatar" aria-hidden="true">R</span>ren</li>
@@ -96,9 +165,9 @@
   <section id="join" class="join">
     <div class="wrap narrow">
       <h2 data-i18n="join.title">Join the project</h2>
-      <p data-i18n="join.p"></p>
+      <p data-i18n="join.p">Native speakers, teachers, linguists and institutions can take part. Specialists review and correct sentences; everyday speakers vote on them; partners help with recordings, permits and outreach.</p>
       <p class="cta-row"><a class="button coral" href="/app/#review" data-i18n="join.cta">Start reviewing</a></p>
-      <p class="join-contact" data-i18n="join.contact"></p>
+      <p class="join-contact" data-i18n="join.contact">To join as a specialist or partner, contact the project team.</p>
     </div>
   </section>
 </main>
@@ -108,5 +177,6 @@
   <a href="https://github.com/aceh-nlp/backend" data-i18n="footer.api">API</a>
 </footer>
 <script src="/strings.js"></script>
+<script src="/loop.js"></script>
 </body>
 </html>
