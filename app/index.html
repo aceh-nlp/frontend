@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Aceh NLP</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/" data-i18n="site.title">Aceh NLP</a>
+  <nav>
+    <a href="/" data-i18n="nav.home">About the project</a>
+    <span id="lang-switch" class="lang-switch" role="group" aria-label="Language"></span>
+  </nav>
+</header>
+<p id="draft-notice" class="notice muted" hidden data-i18n="draft.notice"></p>
+<div id="whoami" class="muted"></div>
+
+<div class="tabs" role="tablist">
+  <button role="tab" data-tab="review" data-i18n="tab.review">Review</button>
+  <button role="tab" data-tab="try" data-i18n="tab.try">Try the model</button>
+</div>
+
+<main>
+  <!-- ===== Review tab ===== -->
+  <div id="tab-review" hidden>
+    <section id="view-login" hidden>
+      <h2 data-i18n="login.title">Sign in</h2>
+      <p class="muted" data-i18n="login.note"></p>
+      <form id="login-form">
+        <label><span data-i18n="login.email">Email</span>
+          <input type="email" id="login-email" required placeholder="you@example.com"></label>
+        <label><span data-i18n="login.name">Name</span>
+          <input type="text" id="login-name" data-i18n-placeholder="login.name.placeholder"></label>
+        <label><span data-i18n="login.dialect">Dialect</span>
+          <select id="login-dialect">
+            <option value="" data-i18n="login.dialect.none">— not a native speaker —</option>
+            <option value="banda_aceh">Banda Aceh</option>
+            <option value="pidie">Pidie</option>
+            <option value="aceh_utara">Aceh Utara</option>
+            <option value="barat">Aceh Barat</option>
+            <option value="other" data-i18n="login.dialect.other">Other</option>
+          </select>
+        </label>
+        <button type="submit" data-i18n="login.submit">Sign in</button>
+      </form>
+      <div id="google-signin"></div>
+    </section>
+
+    <section id="view-datasets" hidden>
+      <h2 data-i18n="datasets.title">Choose a dataset to review</h2>
+      <ul id="dataset-list" class="cards"></ul>
+      <details>
+        <summary data-i18n="coordinator.title">Coordinator</summary>
+        <h3 data-i18n="upload.title">Upload a dataset</h3>
+        <form id="upload-form">
+          <label><span data-i18n="upload.name">Name</span>
+            <input type="text" id="upload-name" pattern="[A-Za-z0-9_-]{1,80}" required></label>
+          <label><span data-i18n="upload.file">JSONL file</span>
+            <input type="file" id="upload-file" accept=".jsonl,.json" required></label>
+          <button type="submit" data-i18n="upload.submit">Upload</button>
+        </form>
+        <p id="upload-result" class="muted"></p>
+        <h3 data-i18n="export.title">Download reviews</h3>
+        <form id="export-form">
+          <label><span data-i18n="export.dataset">Dataset</span>
+            <input type="text" id="export-dataset" required></label>
+          <label><span data-i18n="export.token">Admin token</span>
+            <input type="password" id="export-token" required></label>
+          <button type="submit" data-i18n="export.submit">Download JSON</button>
+        </form>
+      </details>
+    </section>
+
+    <section id="view-review" hidden>
+      <button id="back" class="linklike" data-i18n="review.back">← datasets</button>
+      <div id="progress" class="muted"></div>
+      <article id="card">
+        <div id="card-fields"></div>
+        <div id="specialist-controls" hidden>
+          <div class="rate-row" id="score-buttons">
+            <button data-score="1">1</button><button data-score="2">2</button>
+            <button data-score="3">3</button><button data-score="4">4</button>
+            <button data-score="5">5</button>
+          </div>
+          <p class="muted" data-i18n="review.score.hint"></p>
+          <label><span data-i18n="review.correction">Correction</span>
+            <textarea id="correction" rows="2"></textarea></label>
+          <label><span data-i18n="review.annotation">Annotation</span>
+            <textarea id="annotation" rows="2"></textarea></label>
+        </div>
+        <div id="everyday-controls" hidden>
+          <div class="rate-row" id="vote-buttons">
+            <button data-vote="1">+1</button><button data-vote="-1">−1</button>
+          </div>
+          <p class="muted" data-i18n="review.vote.hint"></p>
+        </div>
+      </article>
+      <div id="done-msg" hidden>
+        <h2 data-i18n="review.done.title">All done 🎉</h2>
+        <p data-i18n="review.done.text"></p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== Try the model tab ===== -->
+  <div id="tab-try" hidden>
+    <section>
+      <h2 data-i18n="try.title">Try the model</h2>
+      <p class="muted" data-i18n="try.note"></p>
+      <p id="gen-offline" class="notice" hidden data-i18n="try.offline"></p>
+      <form id="gen-form">
+        <textarea id="gen-prompt" rows="3" data-i18n-placeholder="try.placeholder"></textarea>
+        <button type="submit" id="gen-submit" data-i18n="try.submit">Generate</button>
+      </form>
+      <pre id="gen-out" class="muted"></pre>
+    </section>
+  </div>
+</main>
+
+<footer class="muted">
+  <a href="https://github.com/aceh-nlp/aceh-nlp-dataset" data-i18n="footer.data">Data in aceh-nlp-dataset</a> ·
+  <a href="https://github.com/aceh-nlp/aceh-nlp-backend" data-i18n="footer.api">API in aceh-nlp-backend</a>
+</footer>
+<script src="/strings.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
