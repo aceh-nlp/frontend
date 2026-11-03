@@ -21,8 +21,6 @@ html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 var(--sans); }
 [hidden] { display: none !important; }
 .wrap { max-width: 1040px; margin-inline: auto; padding-inline: 20px; }
-/* Same left edge as every other section; only the line length is limited. */
-.narrow > * { max-width: 680px; }
 .narrow-text { max-width: 640px; }
 h1, h2 { font-family: var(--serif); font-weight: 600; line-height: 1.15; letter-spacing: -.01em; }
 h2 { font-size: clamp(1.6rem, 4vw, 2.15rem); margin: 0 0 .6em; }
@@ -156,15 +154,20 @@ button:disabled { opacity: .5; cursor: default; filter: none; }
 }
 
 /* people */
-.people { list-style: none; padding: 0; margin: 22px 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
-.people li { display: flex; align-items: center; gap: 10px; font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
-.avatar { flex: none; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: var(--tint); color: var(--accent); font: 600 1.1rem var(--serif); }
+.people { list-style: none; padding: 0; margin: 22px 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.people li { padding: 16px 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--card); text-align: center; font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
 .tags span { padding: 3px 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--card); font-size: .87rem; }
 
 /* join band */
 .join { background: var(--sea); color: var(--on-sea); margin-top: 28px; padding-block: clamp(36px, 7vw, 64px); }
+.roles { list-style: none; padding: 0; margin: 26px 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.roles li { display: flex; flex-direction: column; align-items: flex-start; padding: 16px 18px; border-radius: 10px; background: var(--sea-deep); min-width: 0; }
+.roles h3 { margin: 0 0 4px; font-size: 1.02rem; }
+.roles p { margin: 0; color: var(--on-sea-muted); font-size: .95rem; }
+.roles .button { margin-top: 14px; }
 .join-contact { color: var(--on-sea-muted); font-size: .95rem; margin-bottom: 0; }
+.join-contact a { display: inline-block; padding-block: 4px; color: var(--on-sea); font-weight: 600; }
 .site-footer { display: flex; flex-wrap: wrap; gap: 8px 20px; padding-block: 22px 30px; font-size: .88rem; }
 .github-link { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-left: -9px; color: var(--muted); }
 .github-link:hover { color: var(--accent); }

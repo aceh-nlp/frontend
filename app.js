@@ -97,6 +97,12 @@ $("login-form").addEventListener("submit", async (e) => {
   } catch (err) { alert(err.message); }
 });
 
+// The notice's way back to the sign-in form, for a specialist who used the email form.
+$("closed-again").addEventListener("click", () => {
+  localStorage.removeItem("aceh_token");
+  location.reload();
+});
+
 function initGoogle(clientId) {
   const s = document.createElement("script");
   s.src = "https://accounts.google.com/gsi/client";

@@ -1,14 +1,14 @@
 # Website text in Acehnese — AI DRAFT, needs a native speaker
 
-**Status: not on the website.** Every Acehnese line below was drafted by an AI
+**Status: live on the website, flagged as a draft.** Every Acehnese line below was drafted by an AI
 (Claude, Nov 2026) from the Indonesian. Expect spelling mistakes, Indonesian
 words left in, and unnatural phrasing. Please rewrite each line the way you
 would really say it in the *Koreksi* field, or write "OK" if the draft is fine.
 Spelling follows EBAYD where I could; use whatever spelling you prefer and we
 will keep it consistent.
 
-Once corrected, the lines go into `strings.js` on the site. Until then the
-site shows Indonesian when "Aceh" is chosen.
+Once corrected, the lines replace the drafts in `strings.js`. Until then the
+site shows these drafts, with a notice, when "Aceh" is chosen.
 
 Catatan untuk penutur: tulis ulang setiap baris seperti yang benar-benar Anda
 ucapkan. Draf ini buatan AI dan pasti ada yang salah.
@@ -24,9 +24,9 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **nav.review**
-- ID: Tinjau kalimat
-- EN: Review sentences
-- ACE draft: Pareksa kalimat
+- ID: Tinjauan spesialis
+- EN: Specialist review
+- ACE draft: Pareksa lé ahli
 - Koreksi:
 
 **nav.try**
@@ -92,23 +92,136 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **join.p**
-- ID: Penutur asli, guru, ahli bahasa, dan lembaga dapat ikut serta. Spesialis meninjau dan mengoreksi kalimat; penutur sehari-hari memberi suara; mitra membantu perekaman, perizinan, dan penjangkauan.
-- EN: Native speakers, teachers, linguists and institutions can take part. Specialists review and correct sentences; everyday speakers vote on them; partners help with recordings, permits and outreach.
-- ACE draft: Ureueng Aceh, gurèe, ahli basa, ngon lembaga jeuet meuikot. Ahli geupareksa ngon geupeubeutôi kalimat; ureueng nyang marit uroe-uroe geubri suara; mitra geubantu rekaman, izin, ngon peungajakan.
+- ID: Proyek ini butuh banyak jenis bantuan, bukan hanya peninjau. Untuk saat ini semua peran bersifat sukarela.
+- EN: It takes many kinds of help, not only reviewers. All roles are volunteer for now.
+- ACE draft: Proyek nyoe peureulèe macam-macam bantuan, kon ureueng pareksa mantong. Keu jinoe mandum peran nyan suka rela.
 - Koreksi:
 
 **join.cta**
-- ID: Mulai meninjau
-- EN: Start reviewing
-- ACE draft: Mulai pareksa
+- ID: Spesialis: mulai meninjau
+- EN: Specialists: start reviewing
+- ACE draft: Ahli: mulai pareksa
+- Koreksi:
+
+**join.teach.title**
+- ID: Mengajar atau mempelajari bahasa Aceh
+- EN: Teach or study Acehnese
+- ACE draft: Neumeuajar atawa neubeuet basa Aceh
+- Koreksi:
+
+**join.teach.text**
+- ID: Meninjau kalimat dan memutuskan soal ejaan.
+- EN: Review sentences and settle spelling.
+- ACE draft: Neupareksa kalimat ngon neupeutentèe ejaan.
+- Koreksi:
+
+**join.speak.title**
+- ID: Berbicara bahasa Aceh
+- EN: Speak Acehnese
+- ACE draft: Neumarit basa Aceh
+- Koreksi:
+
+**join.speak.text**
+- ID: Mengoreksi draf dan menulis pemantik percakapan.
+- EN: Correct drafts and write conversation prompts.
+- ACE draft: Neupeubeutôi draf ngon neutuléh peunyo keu meututô.
+- Koreksi:
+
+**join.local.title**
+- ID: Tinggal di Pulau Weh
+- EN: Live on Pulau Weh
+- ACE draft: Neudiëm di Pulo Weh
+- Koreksi:
+
+**join.local.text**
+- ID: Bantu kami bekerja dengan penuh hormat bersama masyarakat.
+- EN: Help us work respectfully with communities.
+- ACE draft: Neubantu kamoe meukeureuja ngon hormat ngon masyarakat.
+- Koreksi:
+
+**join.record.title**
+- ID: Merekam dan menyalin
+- EN: Record and transcribe
+- ACE draft: Rekam ngon tuléh
+- Koreksi:
+
+**join.record.text**
+- ID: Pinjamkan peralatan atau berlatih menjadi pewawancara. Perekaman dimulai setelah proses persetujuan siap.
+- EN: Lend equipment or train as an interviewer. Recording starts once consent is ready.
+- ACE draft: Neupeuinjam alat atawa neubeuet jeuet keu pewawancara. Rekaman geumulai lheueh proses persetujuan ka siap.
+- Koreksi:
+
+**join.write.title**
+- ID: Berbagi tulisan atau menerjemahkan
+- EN: Share writing or translate
+- ACE draft: Neubagi tulisan atawa neupeusalén
+- Koreksi:
+
+**join.write.text**
+- ID: Teks bahasa Aceh yang berhak Anda bagikan, atau terjemahan antara bahasa Aceh dan bahasa Indonesia.
+- EN: Acehnese text you have the right to share, or translation between Acehnese and Indonesian.
+- ACE draft: Teks basa Aceh nyang na hak neubagi, atawa peusalén antara basa Aceh ngon basa Indonesia.
+- Koreksi:
+
+**join.build.title**
+- ID: Membangun perangkat lunak
+- EN: Build software
+- ACE draft: Neupeugot software
+- Koreksi:
+
+**join.build.text**
+- ID: Alat peninjauan, data, dan pelatihan.
+- EN: Review tools, data and training.
+- ACE draft: Alat pareksa, data, ngon latihan.
+- Koreksi:
+
+**join.compute.title**
+- ID: Menawarkan komputasi atau dana
+- EN: Offer compute or funding
+- ACE draft: Neubri komputasi atawa dana
+- Koreksi:
+
+**join.compute.text**
+- ID: Waktu GPU, kredit cloud, dan hibah, untuk saat pelatihan sudah siap.
+- EN: GPU time, cloud credits and grants, for when training is ready.
+- ACE draft: Wate GPU, kredit cloud, ngon hibah, keu watée latihan ka siap.
+- Koreksi:
+
+**join.legal.title**
+- ID: Universitas atau hukum
+- EN: University or legal
+- ACE draft: Universitas atawa hukôm
+- Koreksi:
+
+**join.legal.text**
+- ID: Perizinan, persetujuan, dan perlindungan data.
+- EN: Permits, consent and data protection.
+- ACE draft: Izin, persetujuan, ngon peulindông data.
+- Koreksi:
+
+**join.story.title**
+- ID: Desain, tulis, film
+- EN: Design, write, film
+- ACE draft: Desain, tuléh, film
+- Koreksi:
+
+**join.story.text**
+- ID: Bantu orang memahami proyek ini dengan jujur.
+- EN: Help people understand the project honestly.
+- ACE draft: Neubantu ureueng meuphôm proyek nyoe deungon jujô.
+- Koreksi:
+
+**join.contact.link**
+- ID: Tulis kepada kami di GitHub
+- EN: Write to us on GitHub
+- ACE draft: Neutuléh keu kamoe bak GitHub
 - Koreksi:
 
 **join.contact**
-- ID: Untuk bergabung sebagai spesialis atau mitra, hubungi tim proyek.
-- EN: To join as a specialist or partner, contact the project team.
-- ACE draft: Keu tamong sibagoe ahli atawa mitra, neuhubông tim proyek.
+- ID: Tulisan di sana bersifat publik, jadi jangan sertakan data pribadi. Alamat email akan segera tersedia.
+- EN: Posts there are public, so please leave out personal details. An email address is coming soon.
+- ACE draft: Tulisan nyan jeuet geubaca lé ban mandum ureueng, nyan pasai bèk neupeutamong data droe. Alamat email hana trép teuk na.
 - Koreksi:
-
 
 ## Tool page
 
@@ -552,13 +665,39 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - Koreksi:
 
 **review.closed.text**
-- ID: Penutur sehari-hari nanti akan membandingkan dua jawaban dan memilih yang lebih baik. Sementara itu, ada cara lain untuk membantu.
-- EN: Everyday speakers will soon compare two answers and pick the better one. Until then, there are other ways to help.
-- ACE draft: Ureueng nyang marit uroe-uroe teuma geubandéng dua jaweueb ngon geupiléh nyang leubèh gét. Sigohlom nyan, na cara laén keu meubantu.
+- ID: Spesialis perlu masuk dengan Google, memakai akun yang ada di daftar kami. Untuk menjadi spesialis, atau membantu dengan cara lain, lihat bagian Bergabung. Penutur sehari-hari nanti akan membandingkan dua jawaban dan memilih yang lebih baik.
+- EN: Specialists need to sign in with Google, using the account on our list. To become a specialist, or to help in other ways, see the Join section. Everyday speakers will later compare two answers and pick the better one.
+- ACE draft: Ahli peureulèe tamong ngon Google, ngon akun nyang na lam daftar kamoe. Keu jeuet keu ahli, atawa keu meubantu ngon cara laén, neukalon bagian Tamong. Ureueng nyang marit uroe-uroe teuma geubandéng dua jaweueb ngon geupiléh nyang leubèh gét.
 - Koreksi:
 
 **review.closed.link**
 - ID: Bergabung dengan proyek
 - EN: Join the project
 - ACE draft: Tamong lam proyek nyoe
+- Koreksi:
+
+**review.closed.again**
+- ID: Masuk dengan akun lain
+- EN: Sign in with another account
+- ACE draft: Tamong ngon akun laén
+- Koreksi:
+
+## Small labels and the draft notice
+
+**loop.pause**
+- ID: Jeda
+- EN: Pause
+- ACE draft: Piyôh
+- Koreksi:
+
+**loop.play**
+- ID: Putar
+- EN: Play
+- ACE draft: Puta
+- Koreksi:
+
+**draft.notice**
+- ID: Teks bahasa Aceh ini masih draf buatan AI yang menunggu koreksi penutur asli. Jika ada yang salah, bantu kami memperbaikinya.
+- EN: This Acehnese text is an AI draft awaiting correction by native speakers. If something is wrong, please help us fix it.
+- ACE draft: Teks basa Aceh nyoe mantong draf buatan AI, gohlom geupeubeutôi lé ureueng Aceh. Meunyo salah, neubantu kamoe peubeutôi.
 - Koreksi:
