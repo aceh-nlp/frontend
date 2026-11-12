@@ -51,7 +51,7 @@ ucapkan. Draf ini buatan AI dan pasti ada yang salah.
 - ID: Bahasa hidup di tempat ia dituturkan.
 - EN: A language lives where it is spoken.
 - ACE draft: Basa udep di teumpat geumarit.
-- Koreksi:
+- Koreksi: Basa udep bak teumpat geumarit.
 
 **hero.lead**
 - ID: Bahasa Aceh dibawa di dapur, di atas perahu nelayan, dan di meja kopi, jauh dari data yang melatih model-model hari ini, yang mengenal Aceh dari pilihan orang lain dan mewarisi titik butanya. Kami sekelompok kecil orang dengan latar belakang berbeda, dipertemukan di Pulau Weh oleh rasa ingin tahu dan kepedulian pada bahasa ini, membantu para penutur mengumpulkan kata-kata mereka sendiri dan menentukan apa yang dihitung sebagai data, siapa yang memeriksanya, dan untuk apa. Beginilah kami mulai mendekolonisasi teknologi ini: model bahasa di tangan komunitas menjadi arsip hidup, yang bisa ditanya, dikoreksi, dan diajari, sehingga pengetahuan terus bergerak, seperti selama ini, dari satu suara ke suara berikutnya.

@@ -273,7 +273,7 @@ const STRINGS = {
     "nav.try": "Marit ngon model",
     "nav.home": "Hai proyek nyoe",
     "lang.label": "Basa",
-    "hero.title": "Basa udep di teumpat geumarit.",
+    "hero.title": "Basa udep bak teumpat geumarit.",
     "hero.lead": "Basa Aceh geuba lam dapu, ateuh peurahô nelayan, ngon bak meja kupi, jioh nibak data nyang geulatéh model-model jinoe, nyang geuteupeue Aceh dari piléh ureueng laén ngon jipeusaka titèk buta jih. Kamoe saboh kawan ubit nyang meubeda-beda latar, nyang meurumpok di Pulo Weh kareuna hawa keuneuk teupeue ngon peuduli keu basa nyoe, meubantu ureueng nyang meututoe geukumpoi narit droe ngon geupeutentèe peue nyang jeuet keu data, soe nyang pareksa, ngon keu peue. Meunoe kamoe mulai dekolonisasi teknologi nyoe: model basa bak jaroe masyarakat jeuet keu arsip udep, jeuet tatanyong, tapeubeutôi, ngon tapeurunoe, mangat teupeue teutap jijak, lagèe nyang ka sabé, dari saboh su u su laén.",
     "how.title": "Kiban cara keureuja jih",
     "loop.view.label": "Rupa",
